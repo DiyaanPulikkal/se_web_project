@@ -1,15 +1,3 @@
-.mainNav h2{
-    position: relative;
-    left: 22rem;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    font-size: 2.5rem;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: bold;
-    color: #FFFFFF;
-}
-
-
 .mainNav{
     position: fixed;
     top: 0;
@@ -20,33 +8,48 @@
     grid-template-rows: auto auto;    
 }
 
+.mainNav h2{
+    position: relative;
+    left: 22rem;
+    margin-top: 1rem;
+    margin-bottom: 0px;
+    font-size: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: 0 0 0.5rem black;
+}
+
 .mainNav ul {
     list-style: none;
     display: flex;
     padding-left: 18rem;
+    margin-bottom: 0.5rem;
 }
 
 .mainNav ul li {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 .mainNav img {
     position: fixed;
-    top: 10px;
-    left: 50px;
-    width:200px;
-    height: 200px;
+    top: 1rem;
+    left: 5rem;
+    width:10rem;
+    height: 10rem;
     cursor: pointer;
     border-radius: 50%;
-    transition: top 0.3s , left 0.3s , border 0.3s, width 0.3s , height 0.3s ;
+    transition: top 0.3s , left 0.3s , border 0.3s, width 0.5s , height 0.5s, box-shadow 0.5s;
+    box-shadow: 0 0 1rem black;
 }
 
 .mainNav img:hover {
-    left: 55px;
-    top: 15px;
-    width: 180px;
-    height: 180px;    
-    border: 5px outset black;
+    border: 0.4rem double black;
+    width: 9.2rem;
+    height: 9.2rem;
+    left: 5.2rem;
+    top: 1.2rem;
+    box-shadow: none;
 }
 
 
