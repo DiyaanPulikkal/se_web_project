@@ -1,5 +1,5 @@
 import "./Admission.module.css";
-function Admission(){
+function Admission(props){
 
     return(
         <h1>Admission</h1>

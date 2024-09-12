@@ -11,9 +11,12 @@ import Program from "./Program/Program.jsx";
 import About from "./About/About.jsx";
 import Activities from "./Activities/Activities.jsx";
 import Contact from "./Contact/Contact.jsx";
+import { useState } from "react";
 
 
 function App() {
+  const [isLogged, setIsLogged] = useState(false);
+
   return (
     <>
       <header>
@@ -23,7 +26,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/program" element={<Program />} />
-            <Route path="/admission" element={<Admission />} />
+            <Route path="/admission" element={<Admission isLoggedIn={isLogged}/>} />
             <Route path="/activities" element={<Activities />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
