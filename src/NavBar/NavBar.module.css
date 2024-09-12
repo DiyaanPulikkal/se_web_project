@@ -3,7 +3,7 @@
     left: 400px;
     margin-bottom: 10px;
     margin-top: 10px;
-    font-size: 30px;
+    font-size: 2.5rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
     color: #FFFFFF;
@@ -11,24 +11,23 @@
 
 
 .mainNav{
-    width: 100%;
-    background-color:  #FF5733 ;
-    display: grid;
-    grid-template-rows: auto auto;
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
+    background-color:  #FF5733 ;
+    display: grid;
+    grid-template-rows: auto auto;    
 }
 
 .mainNav ul {
     list-style: none;
     display: flex;
-    /* align-items: center; */
-    padding-left: 250px;
+    padding-left: 18rem;
 }
 
 .mainNav ul li {
-    font-size: 22px;
+    font-size: 1.3rem;
 }
 
 .mainNav img {
@@ -39,16 +38,16 @@
     height: 200px;
     cursor: pointer;
     border-radius: 50%;
+    transition: top 0.3s , left 0.3s , border 0.3s, width 0.3s , height 0.3s ;
 }
 
 .mainNav img:hover {
-    width: 180px;
-    height: 180px;
     left: 55px;
     top: 15px;
-    border: 5px solid black;
+    width: 180px;
+    height: 180px;    
+    border: 5px double black;
 }
-
 
 
 .textLink {
