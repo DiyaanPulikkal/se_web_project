@@ -39,7 +39,7 @@
     height: 10rem;
     cursor: pointer;
     border-radius: 50%;
-    transition: top 0.3s , left 0.3s , border 0.3s, width 0.5s , height 0.5s, box-shadow 0.5s;
+    transition: top 0.3s , left 0.3s , border 0.3s, width 0.5s , height 0.5s, box-shadow 0.5s, opacity 0.5s;
     box-shadow: 0 0 1rem black;
 }
 
@@ -50,6 +50,7 @@
     left: 5.2rem;
     top: 1.2rem;
     box-shadow: none;
+    opacity: 0.9;
 }
 
 
