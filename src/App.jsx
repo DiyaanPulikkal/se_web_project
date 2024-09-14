@@ -17,7 +17,7 @@ import { useState } from "react";
 
 
 function App() {
-  const [isLogged, setIsLogged] = useState({value: true});
+  const [isLogged, setIsLogged] = useState({value: false});
 
   return (
     <>
