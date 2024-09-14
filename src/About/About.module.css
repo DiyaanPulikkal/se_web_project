@@ -1,5 +1,7 @@
 .textExplainArea {
     background-color: #f8f7f2;
+    padding: 2rem;
+    border-radius: 50px;
 }
 
 .textExplainArea p{
@@ -18,21 +20,24 @@
 .backgroundAreaEachbox1and3 {
     background-color: #607f83;
     width: 100%;
-    padding-bottom: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
 }
 
 .backgroundAreaEachbox24 {
     background-color: #ffad60;
     width: 100%;
-    padding-bottom: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
 }
 
 .topicName {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
     text-align: center;
     font-weight: bold;
 }
