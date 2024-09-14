@@ -38,10 +38,10 @@
 
 .logo {
     position: absolute;
-    top: 1rem;
-    left: 5rem;
-    width:10rem;
-    height: 10rem;
+    top: 1vh;
+    left: 5vw;
+    width:9.2vw;
+    height: 9.2vw;
     cursor: pointer;
     border-radius: 50%;
     transition: box-shadow 0.5s;
