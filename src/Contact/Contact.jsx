@@ -35,11 +35,9 @@ function Contact() {
       <div className= {style.containerDiv}>
             <div className= {style.innerdiv}>
                 <h3>Address</h3>
-                <p>KMITL Engineering Faculty, HM</p>
-                <p>Building 6th floor, 604.</p>
-                <p>01 Soi Chalongkrung, เขตลาดกระบัง </p>
-                <p>กรุงเทพมหานคร 10520</p>
-                
+                <p>King Mongkut's Institute of Technology Ladkrabang</p>
+                <p>1 Chalong Krung 1 Alley, Lat Krabang,</p>
+                <p>Bangkok 10520, Thailand</p>
             </div>
 
             <div className= {style.innerdiv}>
