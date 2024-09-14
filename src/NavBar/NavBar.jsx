@@ -15,7 +15,7 @@ function NavBar(){
                 <li><Link className={styles.textLink} to="/about">About</Link></li>
                 <li><Link className={styles.textLink} to="/activities">Activities</Link></li>
                 <li><Link className={styles.textLink} to="/contact">Contact</Link></li>
-                <li><Link className={styles.login_link} to="/contact"><img src={accountIcon} className={styles.account_icon}></img>Login</Link></li>
+                <li><Link className={styles.login_link} to="/login"><img src={accountIcon} className={styles.account_icon}></img>Login</Link></li>
             </ul>
         </nav>
     );
