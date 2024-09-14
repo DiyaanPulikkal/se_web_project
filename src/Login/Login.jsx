@@ -20,7 +20,7 @@ function Login() {
           
           <br />
           <div className= {style.freespace}>
-            <label className= {style.textcolor}>
+            <label className= {style.textcolor}> 
             Password:&nbsp;&nbsp;
             <input type="password" name="password" id = "password" placeholder="********" className= {style.customInput}/>
           </label>
