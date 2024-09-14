@@ -6,6 +6,7 @@
     background-color:  #FF5001 ;
     border-bottom: black 0.3rem solid;
     display: flex;
+    box-sizing: border-box;
 }
 
 .mainNav h2{
