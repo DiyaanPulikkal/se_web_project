@@ -4,7 +4,7 @@ import emailIcon from './email.png'
 function Footer() {
   return (
     <footer className={style.mainFooter}>
-      <h2><bold>King Mongkut's Institute of Techonology, Ladkrabang</bold></h2>
+      <h2><b>King Mongkut's Institute of Techonology, Ladkrabang</b></h2>
       <div className={style.container}>
         <div className={style.footerLeft}>
           <h3>Address</h3>

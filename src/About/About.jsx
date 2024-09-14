@@ -6,7 +6,7 @@ function About(){
         
         <h1 className = {style.heading}>About</h1>
         <div className= {style.backgroundAreaEachbox1and3}>
-            <h1 className={style.topicName}>What is software Engineering?</h1>
+            <h1>What is software Engineering?</h1>
             <div className={style.textExplainArea}>
                 <p>Software engineering (SE) is an engineering discipline concerning all aspects of software production, including software analysis, design, development, testing, and deployment. SE requires profound abstract and logical thinking and the application of mathematics, logic, and computer science in order to produce efficient and reliable software with the available resources.</p>
             </div>
@@ -45,6 +45,5 @@ function About(){
     );
 }
 
-topicName
 
 export default About;
