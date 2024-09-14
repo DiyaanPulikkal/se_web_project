@@ -27,6 +27,23 @@
     padding-top: 1vw;
 }
 
+.backgroundAreaEachbox1and3 h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    font-weight: bold;
+    margin-left: 12vw;
+}
+
+.backgroundAreaEachbox24 h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    font-weight: bold;
+    margin-left: 12vw;
+}
+
+
+
+
 .backgroundAreaEachbox24 {
     background-color: #ffad60;
     padding-bottom: 2vw;
