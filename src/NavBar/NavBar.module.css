@@ -10,7 +10,7 @@
 
 .mainNav h2{
     position: relative;
-    left: 14vw;
+    left: 11vw;
     margin-top: 1vh;
     margin-bottom: 0px;
     font-size: 2rem;
@@ -28,7 +28,7 @@
 .mainNav ul {
     list-style: none;
     display: flex;
-    margin-left: 12.5vw;
+    margin-left: 8vw;
 }
 
 .mainNav ul li {
@@ -39,7 +39,7 @@
 .logo {
     position: absolute;
     top: 1vh;
-    left: 5vw;
+    left: 2vw;
     width:9.2vw;
     height: 9.2vw;
     cursor: pointer;
@@ -77,8 +77,8 @@
 
 .login_link img {
     vertical-align: middle;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 3.5vh;
+    height: 3.5vh;
     margin-right: 0.5rem;
 }
 
