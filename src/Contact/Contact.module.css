@@ -1,0 +1,43 @@
+.header {
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.Mapsection {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    justify-content: center;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.iconEach {
+    width: 2rem;
+    height: 2rem;
+    color: white;
+    vertical-align: middle;
+}
+
+.containerDiv {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+    height: 20rem;
+    width: 70%;
+}
+
+.innerdiv {
+    flex: 1;                /* Optional: this makes each div take equal space */
+    margin-right: 10px;      /* Optional: adds space between divs */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+    /* background-color: #f8f7f2; */
+}
+
+.innerdiv:last-child {
+  margin-right: 0;         /* Removes right margin for the last div */
+}
+
+.forFace {
+    vertical-align: middle;
+}

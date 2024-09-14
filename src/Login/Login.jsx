@@ -3,7 +3,7 @@ import ima from "./software.png";
 
 function Login() {
   return (
-    <div>
+    <div className = {style.outterdiv}>
       <h1 className={style.head}>Login</h1>
       <div className={style.backgroundLogin}>
         <form>

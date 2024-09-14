@@ -73,6 +73,12 @@ img {
     padding: 0.5rem;
     font-size: 1rem; 
     height: 1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 
+.outterdiv{
+    justify-content: center;
+    align-items: center;
+    margin: 10%;
+}

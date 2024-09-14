@@ -4,7 +4,7 @@
     left: 0;
     width: 100vw;
     background-color:  #FF5001 ;
-    border-bottom: black 0.3rem solid;
+    border-bottom: black 0.3rem;
     display: flex;
     box-sizing: border-box;
 }
