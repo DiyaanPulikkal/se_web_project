@@ -1,8 +1,8 @@
-
+import style from './Footer.module.css'
 function Footer() {
   return (
-    <footer>
-      <p>© 2021</p>
+    <footer className={style.mainFooter}>
+      <p></p>
     </footer>
   );
 }

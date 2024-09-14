@@ -1,16 +1,16 @@
 .mainNav{
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     background-color:  #FF5001 ;
-    display: grid;
-    grid-template-rows: auto auto;    
+    border-bottom: black 0.3rem solid;
+    display: flex;
 }
 
 .mainNav h2{
     position: relative;
-    left: 22rem;
+    left: 14.5rem;
     margin-top: 1rem;
     margin-bottom: 0px;
     font-size: 2rem;
@@ -20,19 +20,25 @@
     text-shadow: 0 0 0.5rem black;
 }
 
+.listDiv{
+    display: flex;
+    margin-top: 3rem;
+}
+
 .mainNav ul {
     list-style: none;
     display: flex;
-    padding-left: 18rem;
+    margin-left: 15rem;
     margin-bottom: 0.5rem;
 }
 
 .mainNav ul li {
     font-size: 1.1rem;
+    text-decoration: none;
 }
 
 .logo {
-    position: fixed;
+    position: absolute;
     top: 1rem;
     left: 5rem;
     width:10rem;
@@ -72,8 +78,7 @@
     display: flex;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
-    margin-left: 17rem;
-    text-decoration: none;
+    margin-left: 7rem;
 }
 
 .login_link img {

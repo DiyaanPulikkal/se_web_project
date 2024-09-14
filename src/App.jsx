@@ -21,9 +21,10 @@ function App() {
 
   return (
     <>
-      <header>
         <Router>
-          <NavBar />
+          <header>
+            <NavBar />
+          </header>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -33,9 +34,10 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<Login />} />
           </Routes>
-          <Footer />
+          <footer>
+            <Footer />
+          </footer>
         </Router>
-      </header>
 
 
     </>
