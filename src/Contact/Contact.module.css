@@ -41,3 +41,12 @@
 .forFace {
     vertical-align: middle;
 }
+
+.fortextface {
+    text-decoration: none;
+    color: black;
+}
+
+.fortextface:hover {
+    color: #3b5998;
+}

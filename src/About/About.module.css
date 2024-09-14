@@ -8,15 +8,26 @@
 
 .textExplainArea p{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1rem;         /* Adjust font size for readability */
+    line-height: 1.6;        /* Increase line height for better spacing between lines */
+    text-align: justify;     /* Align the text in a justified manner */
+    margin: 20px 0;          /* Add space around the paragraph */
+    padding: 0 10px;         /* Add padding inside the paragraph */
+    color: #333;           /* Set a clean, dark text color */
 }
 
 .textExplainArea li{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1rem;         /* Adjust font size for readability */
+    line-height: 1.6;        /* Increase line height for better spacing between lines */
+    text-align: justify;     /* Align the text in a justified manner */
+    color: #333;           /* Set a clean, dark text color */
 }
 
 .heading {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
+    font-size: 3rem;
 }
 
 .backgroundAreaEachbox1and3 {
@@ -36,7 +47,7 @@
 
 .backgroundAreaEachbox24 h1 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: black;
+    color: #333;
     font-weight: bold;
     margin-left: 12vw;
 }

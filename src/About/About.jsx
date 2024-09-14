@@ -2,13 +2,13 @@ import style from "./About.module.css";
 import TextSection from "./TextSection.jsx";
 function About(){
     const heading1 = "What is Software Engineering?";
-    const content1 = <p>Software engineering (SE) is an engineering discipline concerning all aspects of software production,
+    const content1 = <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Software engineering (SE) is an engineering discipline concerning all aspects of software production,
                          including software analysis, design, development, testing, and deployment. SE requires profound abstract 
                          and logical thinking and the application of mathematics, logic, and computer science in order to produce 
                          efficient and reliable software with the available resources</p>;
 
     const heading2 = "Why Study Software Engineering?";
-    const content2 = <p>It is hard to overstate the ubiquity of software nowadays. Every computer system is governed by software. 
+    const content2 = <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It is hard to overstate the ubiquity of software nowadays. Every computer system is governed by software. 
                         Almost every human activity involves software in some form. Undoubtedly software industry is one of the largest 
                         and fastest growing industries in the world. Consequently, skilled software engineers are in high demand 
                         worldwide. As software becomes more and more complex, the programming skills and the rudimentary knowledge of 
@@ -19,7 +19,7 @@ function About(){
                         tools, techniques, and methodologies in order to produce the software in an efficient manner.</p>;
 
     const heading3 = "Why KMITL?"
-    const content3 = <p>KMITL's Software Engineering program stands out for its strong technical foundation, practical learning approach, 
+    const content3 = <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KMITL's Software Engineering program stands out for its strong technical foundation, practical learning approach, 
                         and industry connections. Known as one of Thailand's top engineering institutes, KMITL offers a well-rounded 
                         curriculum covering core areas of software development and emerging fields like AI and cybersecurity. Students 
                         benefit from modern labs, industry-sponsored projects, and internship opportunities, all of which provide 
@@ -38,7 +38,7 @@ function About(){
                             <li>Analysts and designers of IT systems, IT consultants</li>
                             <li>Software entrepreneurs</li>
                         </ul>
-                        <p>With strong foundation in computer science, mathematics, and software engineering principles, 
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With strong foundation in computer science, mathematics, and software engineering principles, 
                             graduates of the SE program may continue their studies at postgraduate level in various software 
                             engineering or computing related fields in universities worldwide.</p>
                     </>;

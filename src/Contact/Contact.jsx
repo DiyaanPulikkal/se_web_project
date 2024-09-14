@@ -45,7 +45,7 @@ function Contact() {
                 <p><img src={phonecon} alt="phone" className={style.iconEach}/>   02-329-8321</p>
                 <p><img src={emailcon} alt="email" className={style.iconEach}/>   siie@kmitl.ac.th</p>
                 <p><img src={emailcon} alt="email" className={style.iconEach}/>   wiboon.pr@kmitl.ac.th</p>
-                <p> <a href="https://www.facebook.com/sekmitl"  target="_blank" rel="noopener noreferrer"><img src={facebook} alt="facebook" className={style.iconEach}/></a>    Software Engineering KMITL</p>
+                <p> <a href="https://www.facebook.com/sekmitl"  target="_blank" rel="noopener noreferrer" className={style.fortextface}><img src={facebook} alt="facebook" className={style.iconEach}/>    Software Engineering KMITL</a></p>
             </div>
       </div>
     </>
