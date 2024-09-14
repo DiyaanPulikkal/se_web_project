@@ -22,18 +22,18 @@
 
 .listDiv{
     display: flex;
-    margin-top: 3rem;
+    margin-top: 2.3rem;
 }
 
 .mainNav ul {
     list-style: none;
     display: flex;
-    margin-left: 15rem;
+    margin-left: 13rem;
     margin-bottom: 0.5rem;
 }
 
 .mainNav ul li {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     text-decoration: none;
 }
 
@@ -69,11 +69,6 @@
     color: black;
 }
 
-.account_icon {
-    width: 1rem;
-    height: 1rem;
-}
-
 .login_link {
     display: flex;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -91,3 +86,4 @@
 .login_link:hover {
     color: #585859;
 }
+
