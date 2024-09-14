@@ -10,23 +10,27 @@ function Login() {
           <br/>
           <img src={ima} alt="Software" className={style.image}/>
           <br/>
-    
+
           <div className= {style.freespace}>
             <label className= {style.textcolor}>
-            Username:
-            <input type="text" name="username" id = "username"/>
+            Username:&nbsp;
+            <input type="text" name="username" id = "username" placeholder="E-mail" className= {style.customInput}/>
           </label>
           </div>
           
           <br />
           <div className= {style.freespace}>
             <label className= {style.textcolor}>
-            Password:
-            <input type="password" name="password" id = "password"/>
+            Password:&nbsp;&nbsp;
+            <input type="password" name="password" id = "password" placeholder="********" className= {style.customInput}/>
           </label>
           </div>
           
           <br />
+          <a href="/forgot" className={style.forget}>Forgot Password</a>
+          <br />
+          <br />
+          <a href="/register" className={style.register}>Register</a>
           <button type="submit" className={style.buttonst}>Login</button>
         </form>
       </div>
