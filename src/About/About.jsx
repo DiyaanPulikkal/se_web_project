@@ -47,10 +47,10 @@ function About(){
     const contentArr = [content1, content2, content3, content4];
 
     return(
-        <>
+        <div className={style.spacebelowInAbout}> 
         <h1 className = {style.heading}>About</h1>
         {contentArr.map((content, i) => {return <TextSection key={i} index={i+1} content={content} heading={headingArr[i]} />})}
-        </>
+        </div>
     );
 }
 
