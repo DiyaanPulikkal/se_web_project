@@ -46,7 +46,7 @@
     cursor: pointer;
     border-radius: 50%;
     transition: box-shadow 0.5s;
-    box-shadow: 0 0 1rem black;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.51);
 }
 
 .mainNav img:hover {

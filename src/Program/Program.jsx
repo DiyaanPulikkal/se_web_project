@@ -8,6 +8,8 @@ import kmitl_insert from "./kmilt_image_insertToweb.jpg";
 function Program(){
 
 
+    
+
     // Smooth scrolling to lick element
     const smoothScroll = (event, id) => {
         event.preventDefault(); // Prevent default link behavior
