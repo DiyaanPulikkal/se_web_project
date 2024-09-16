@@ -1,9 +1,10 @@
 .textExplainArea {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;       /* Adjust font size for readability */
     background-color: #f8f7f2;
     padding: 2vw;
     border-radius: 50px;
-    margin-left: 15vw;
-    margin-right: 15vw;
+    font-size: 1.3rem;  
+    max-width: 45vw;
 }
 
 .spacebelowInAbout {
@@ -11,8 +12,6 @@
 }
 
 .textExplainArea p{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 1rem;         /* Adjust font size for readability */
     line-height: 1.6;        /* Increase line height for better spacing between lines */
     text-align: justify;     /* Align the text in a justified manner */
     margin: 20px 0;          /* Add space around the paragraph */
@@ -21,8 +20,6 @@
 }
 
 .textExplainArea li{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 1rem;         /* Adjust font size for readability */
     line-height: 1.6;        /* Increase line height for better spacing between lines */
     text-align: justify;     /* Align the text in a justified manner */
     color: #333;           /* Set a clean, dark text color */
@@ -35,18 +32,38 @@
 }
 
 .backgroundAreaEachbox1and3 {
-    background-color: #607f83;
+    background-color: #585858;
+    padding-top: 2vw; 
     padding-bottom: 2vw;
-    padding-left: 2vw;
-    padding-right: 2vw;
-    padding-top: 1vw;
+    padding-left: 0vw;
+    padding-right: 10vw;   
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-right: 15vw;
+    display: flex;
 }
 
 .backgroundAreaEachbox1and3 h1 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
+    font-size: 2.7rem;
     font-weight: bold;
-    margin-left: 12vw;
+    margin-top: 8vh;
+    margin-bottom: 0vh;
+    margin-left: 7vw;
+    margin-right: 3vw;
+    
+}
+
+.backgroundAreaEachbox24 {
+    background-color: #ffd300;
+    padding-top: 1vw;
+    padding-bottom: 2vw;
+    padding-left: 7vw;
+    padding-right: 2vw;    
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: 15vw;
 }
 
 .backgroundAreaEachbox24 h1 {
@@ -59,13 +76,7 @@
 
 
 
-.backgroundAreaEachbox24 {
-    background-color: #ffad60;
-    padding-bottom: 2vw;
-    padding-left: 2vw;
-    padding-right: 2vw;
-    padding-top: 1vw;
-}
+
 
 .topicName {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
