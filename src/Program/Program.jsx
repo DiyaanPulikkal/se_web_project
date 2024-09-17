@@ -4,8 +4,9 @@ import glasgow_stu from "./glasgow_student.jpeg";
 import queenland_college from "./queensland_campus.jpg";
 import queensland_stu from "./queensland_student.jpg";
 import kmitl_img from "./kmitl_college.jpg";
-import kmitl_insert from "./kmilt_image_insertToweb.jpg";
+import kmitl_insert from "./kmitl_image_insertToweb.jpg";
 import se_software_insert from "./gimmic_se.jpg";
+import se_software_insert2 from "./software_insert.jpg";
 function Program(){
 
 
@@ -176,20 +177,12 @@ function Program(){
                     </div>
                 </div>
                 
-                <div className={style.divOfReqandFeeandIma}>
-                    <div className={style.divContainImageQueeensland}>
-                        <img src={kmitl_insert} alt="KMITL" className={style.imagestudent_Glasgow} />
-                        <div className={style.bubble1}></div>
-                        <div className={style.bubble2}></div>
-                        <div className={style.bubble3}></div>
-                        <div className={style.bubble4}></div>
-                        <div className={style.bubble5}></div>
-                        <div className={style.bubble6}></div>
-                        <div className={style.bubble7}></div>
-                        <div className={style.bubble8}></div>
+                <div className={style.divOfYear3_4_imag}>
+                    <div className={style.divContainImageTnsertedKmitl}>
+                        <img src={kmitl_insert} alt="KMITL" className={style.imagestudent_Queensland} />
                     </div>
-                    <div className={style.divRequirmentNFee}>
-                        <div className={style.divRequirment}>
+                    <div className={style.divYear3_4_insertima}>
+                        <div className={style.divYear3_4}>
                             <h1>Year 3 and Year 4 (KMITL)</h1>
                             <hr/>
                             <p>
@@ -204,14 +197,8 @@ function Program(){
                                 The study plans for these three specializations differ in some required courses. Also the students are recommended to toe work on their senior projects that utilize the knowledge of their respective specializations.
                             </p>
                         </div>
-                        <div className={style.divTutitionFee}>
-                            <h1>Tuition Fees</h1>
-                            <hr/>
-                            <ul>
-                                <li>2 years at KMITL, Tuition fee : THB 180,000 per year.</li>
-                                <li>2 years at Glasgow, Tuition fee with scholarship : GBP 17,536 per year.</li>
-                            </ul>
-                            <p>* Rates as of Academic Year 2020. Every student joining the double-degree program is entitled to theKMITL - Glasgow Undergraduate Scholarship which provides 20% reduction from the full tuition-fee rate for international students at Glasgow University.</p>
+                        <div className={style.imageInsertSE_inYear3_4}>
+                            <img src={se_software_insert2} alt="KMITL software"/>
                         </div>
                     </div>
                     <div className={style.linkExploreMorediv}>  

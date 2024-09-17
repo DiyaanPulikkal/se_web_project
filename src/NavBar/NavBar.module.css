@@ -3,11 +3,17 @@
     top: 0;
     left: 0;
     width: 100vw;
-    background-color:  #FF5001 ; 
+    background-color:  #F2613F ; 
     /* FB773C */
+    /* FF7F3E */
+    /* FF6500 */
+    /* F2613F */
+    /* FB6D48 */
+    /* FC6736 */
+    /* FF6C22 */
     display: flex;
     box-sizing: border-box;
-    border-bottom: 3px solid black;
+    border-bottom: 3px rgb(76, 73, 73);
 }
 
 .mainNav h2{

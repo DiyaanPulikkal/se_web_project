@@ -571,7 +571,7 @@
     margin-left: 0;
     border: 1;
 }
-.seDiv p {
+.seDiv p{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1.2rem;
     max-width: 60vw;
@@ -579,4 +579,62 @@
     line-height: 1.6;  
     text-align: left;
     padding-left: 15%;
+}
+
+
+.divOfYear3_4_imag{
+    margin-top: 15%;
+    margin-bottom: 15%;
+    /* background-color: #eeeeee;
+    padding-top: 10%;
+    padding-bottom: 10%; */
+}
+
+.divContainImageTnsertedKmitl {
+    margin: 0;
+}
+
+
+.divYear3_4_insertima {
+    display: flex;
+    justify-content: center;
+    padding-left: 12.5%;
+    padding-right: 20%;
+    gap: 5rem;
+    background-color: #eeeeee;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin: 0;
+}
+
+.divYear3_4 {
+    width: 80%;
+}
+.divYear3_4 h1{
+    font-size: 2.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.divYear3_4 li{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:#58575c;
+    line-height: 1.6;  
+    font-size: 1.2rem;
+}
+.divYear3_4 p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.2rem;
+    color:#58575c;
+    line-height: 1.6;  
+}
+
+.imageInsertSE_inYear3_4 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 20%;
+}
+.imageInsertSE_inYear3_4 img {
+    width: 27rem;
+    height: 17rem;
+    object-fit: cover;
+    justify-content: center;
+    padding-top: 80%;
 }
