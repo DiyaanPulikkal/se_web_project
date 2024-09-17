@@ -15,6 +15,10 @@ function Footer() {
           <br /> 
           <img className={style.icons} src={emailIcon} alt="email" /> xxxxx@xxxxx.xxx
         </div>
+        <div className={style.footerRight}>
+          <div><h3>Our Topics</h3></div>
+          
+        </div>
       </div>
     </footer>
   );

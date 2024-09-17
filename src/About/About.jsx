@@ -18,7 +18,7 @@ function About(){
                         the topmost level down to the implementation level. Moreover, a software engineer must be able to use proper 
                         tools, techniques, and methodologies in order to produce the software in an efficient manner.</p>;
 
-    const heading3 = "Why KMITL?"
+    const heading3 = "Why students choose KMITL?"
     const content3 = <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KMITL's Software Engineering program stands out for its strong technical foundation, practical learning approach, 
                         and industry connections. Known as one of Thailand's top engineering institutes, KMITL offers a well-rounded 
                         curriculum covering core areas of software development and emerging fields like AI and cybersecurity. Students 

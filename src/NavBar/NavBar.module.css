@@ -3,10 +3,11 @@
     top: 0;
     left: 0;
     width: 100vw;
-    background-color:  #FB773C ;
-    border-bottom: black 0.3rem;
+    background-color:  #FF5001 ; 
+    /* FB773C */
     display: flex;
     box-sizing: border-box;
+    border-bottom: 3px solid black;
 }
 
 .mainNav h2{
@@ -86,4 +87,5 @@
 .login_link:hover {
     color: #585859;
 }
+
 
