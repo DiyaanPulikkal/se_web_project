@@ -42,7 +42,7 @@
     margin-left: 2vw;
     margin-right: 15vw;
     display: flex;
-    box-shadow: 1rem 1rem #000, 2rem 2rem #F00, 3rem 3rem #00F;
+    box-shadow: 1rem 1rem #7ba18c, 2rem 2rem #516e99, 3rem 3rem #1b376b;
 }
 
 .backgroundAreaEachbox24 {
@@ -56,7 +56,7 @@
     margin-left: 15vw;
     margin-right:4vw;
     display: flex;
-    box-shadow: 1rem 1rem #000, 2rem 2rem #F00, 3rem 3rem #00F;
+    box-shadow: 1rem 1rem #E36414, 2rem 2rem #EF4040, 3rem 3rem #2B3499;
 }
 
 .backgroundAreaEachbox1and3 h1 {
