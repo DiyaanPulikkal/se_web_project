@@ -8,6 +8,16 @@ import facebook from './facebookicon.png';
 const position = [13.7265341, 100.7748818];
 
 function Contact() {
+  const copyToClipboard = (text) => {
+    navigator.clipboard.writeText(text)
+      .then(() => {
+        alert(text + ' copied to clipboard!');
+      })
+      .catch(() => {
+        alert('Failed to copy to clipboard.');
+      });
+  };
+
   return (
     <>
       <h1 className= {style.header}>Contact Us</h1>
@@ -41,10 +51,10 @@ function Contact() {
             </div>
 
             <div className= {style.innerdiv}>
-                <p><img src={phonecon} alt="phone" className={style.iconEach}/>   02-329-8000</p>
-                <p><img src={phonecon} alt="phone" className={style.iconEach}/>   02-329-8321</p>
-                <p><img src={emailcon} alt="email" className={style.iconEach}/>   siie@kmitl.ac.th</p>
-                <p><img src={emailcon} alt="email" className={style.iconEach}/>   wiboon.pr@kmitl.ac.th</p>
+                <p onClick={() => copyToClipboard('02-329-8000')} className={style.fortextface}><img src={phonecon} alt="phone" className={style.iconEach}/>   02-329-8000</p>
+                <p onClick={() => copyToClipboard('02-329-8321')} className={style.fortextface}><img src={phonecon} alt="phone" className={style.iconEach}/>   02-329-8321</p>
+                <p> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=siie@kmitl.ac.th&su=Subject%20Here&body=Message%20body"  target="_blank" rel="noopener noreferrer" className={style.fortextface}><img src={emailcon} alt="email" className={style.iconEach}/>   siie@kmitl.ac.th</a></p>
+                <p> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=wiboon.pr@kmitl.ac.th&su=Subject%20Here&body=Message%20body"  target="_blank" rel="noopener noreferrer" className={style.fortextface}><img src={emailcon} alt="email" className={style.iconEach}/>   wiboon.pr@kmitl.ac.th</a></p>
                 <p> <a href="https://www.facebook.com/sekmitl"  target="_blank" rel="noopener noreferrer" className={style.fortextface}><img src={facebook} alt="facebook" className={style.iconEach}/>    Software Engineering KMITL</a></p>
             </div>
       </div>
