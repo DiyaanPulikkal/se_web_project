@@ -24,7 +24,7 @@ function Contact() {
 
 
       <div className={style.Mapsection}>
-        <h3>Google Map</h3>
+        <h3>Map</h3>
         <MapContainer
           center={position}
           zoom={13}

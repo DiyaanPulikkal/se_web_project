@@ -18,10 +18,17 @@
     text-shadow: black 1px 1px 1px;
 }
 
+.mainFooter a {
+    text-decoration: none;
+    color: white;
+    width: 2vw;
+}
+
 .container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 3vh;
 }
 
 .icons{
