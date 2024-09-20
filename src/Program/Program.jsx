@@ -179,7 +179,7 @@ function Program(){
                 
                 <div className={style.divOfYear3_4_imag}>
                     <div className={style.divContainImageTnsertedKmitl}>
-                        <img src={kmitl_insert} alt="KMITL" className={style.imagestudent_Queensland} />
+                        <img src={kmitl_insert} alt="KMITL" className={style.imagestudent_kmitl} />
                     </div>
                     <div className={style.divYear3_4_insertima}>
                         <div className={style.divYear3_4}>
