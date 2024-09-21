@@ -26,13 +26,6 @@
   color: #333; /* Set a clean, dark text color */
 }
 
-.heading {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  text-align: center;
-  font-size: 4rem;
-}
-
 .backgroundAreaEachbox1and3 {
   background-color: #9cafaa;
   padding-top: 2vw;

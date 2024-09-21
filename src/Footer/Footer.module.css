@@ -34,6 +34,7 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   margin-bottom: 3vh;
+  max-width: 70vw;
 }
 
 .icons {
@@ -45,6 +46,7 @@
 .footerLeft {
   border-right: white 2px solid;
   max-width: 40vw;
+  margin-right: 5vw;
 }
 
 .footerRight {

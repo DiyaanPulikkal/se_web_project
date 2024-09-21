@@ -23,7 +23,7 @@ function Program() {
 
   return (
     <>
-      <h1 className={style.headerProgram}>Program</h1>
+      <h1 className="pageHeading">Program</h1>
       <div className={style.linkBox}>
         <p>
           <a

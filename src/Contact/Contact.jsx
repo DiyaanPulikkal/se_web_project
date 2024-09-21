@@ -2,9 +2,9 @@ import { useState } from "react";
 import style from "./Contact.module.css";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import phonecon from './phone-calli.png';
-import emailcon from './emaili.png';
-import facebook from './facebookicon.png';
+import phonecon from "./phone-calli.png";
+import emailcon from "./emaili.png";
+import facebook from "./facebookicon.png";
 
 const position = [13.7265341, 100.7748818];
 
@@ -12,20 +12,20 @@ function Contact() {
   const [copiedIndex, setCopiedIndex] = useState(null);
 
   const copyToClipboard = (text, index) => {
-    navigator.clipboard.writeText(text)
+    navigator.clipboard
+      .writeText(text)
       .then(() => {
         setCopiedIndex(index); // Show popup for the clicked phone number
         setTimeout(() => setCopiedIndex(null), 2000); // Hide popup after 2 seconds
       })
       .catch(() => {
-        alert('Failed to copy to clipboard.');
+        alert("Failed to copy to clipboard.");
       });
   };
 
   return (
     <>
-      <h1 className={style.header}>Contact Us</h1>
-
+      <h1 className="pageHeading">Contact Us</h1>
 
       <div className={style.Mapsection}>
         <h3>Map</h3>
@@ -55,11 +55,62 @@ function Contact() {
         </div>
 
         <div className={style.innerdiv}>
-          <p onClick={() => copyToClipboard('02-329-8000', 0)} className={style.fortextface}><img src={phonecon} alt="phone" className={style.iconEach} />   02-329-8000 {copiedIndex === 0 && <span className={style.copiedPopup}>Copied</span>} </p>
-          <p onClick={() => copyToClipboard('02-329-8321', 1)} className={style.fortextface}><img src={phonecon} alt="phone" className={style.iconEach} />   02-329-8321 {copiedIndex === 1 && <span className={style.copiedPopup}>Copied</span>} </p>
-          <p> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=siie@kmitl.ac.th&su=Subject%20Here&body=Message%20body" target="_blank" rel="noopener noreferrer" className={style.fortextface}><img src={emailcon} alt="email" className={style.iconEach} />   siie@kmitl.ac.th</a></p>
-          <p> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=wiboon.pr@kmitl.ac.th&su=Subject%20Here&body=Message%20body" target="_blank" rel="noopener noreferrer" className={style.fortextface}><img src={emailcon} alt="email" className={style.iconEach} />   wiboon.pr@kmitl.ac.th</a></p>
-          <p> <a href="https://www.facebook.com/sekmitl" target="_blank" rel="noopener noreferrer" className={style.fortextface}><img src={facebook} alt="facebook" className={style.iconEach} />    Software Engineering KMITL</a></p>
+          <p
+            onClick={() => copyToClipboard("02-329-8000", 0)}
+            className={style.fortextface}
+          >
+            <img src={phonecon} alt="phone" className={style.iconEach} />{" "}
+            02-329-8000{" "}
+            {copiedIndex === 0 && (
+              <span className={style.copiedPopup}>Copied</span>
+            )}{" "}
+          </p>
+          <p
+            onClick={() => copyToClipboard("02-329-8321", 1)}
+            className={style.fortextface}
+          >
+            <img src={phonecon} alt="phone" className={style.iconEach} />{" "}
+            02-329-8321{" "}
+            {copiedIndex === 1 && (
+              <span className={style.copiedPopup}>Copied</span>
+            )}{" "}
+          </p>
+          <p>
+            {" "}
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=siie@kmitl.ac.th&su=Subject%20Here&body=Message%20body"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={style.fortextface}
+            >
+              <img src={emailcon} alt="email" className={style.iconEach} />{" "}
+              siie@kmitl.ac.th
+            </a>
+          </p>
+          <p>
+            {" "}
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=wiboon.pr@kmitl.ac.th&su=Subject%20Here&body=Message%20body"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={style.fortextface}
+            >
+              <img src={emailcon} alt="email" className={style.iconEach} />{" "}
+              wiboon.pr@kmitl.ac.th
+            </a>
+          </p>
+          <p>
+            {" "}
+            <a
+              href="https://www.facebook.com/sekmitl"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={style.fortextface}
+            >
+              <img src={facebook} alt="facebook" className={style.iconEach} />{" "}
+              Software Engineering KMITL
+            </a>
+          </p>
         </div>
       </div>
     </>

@@ -83,7 +83,7 @@ function About() {
 
   return (
     <div className={style.spacebelowInAbout}>
-      <h1 className={style.heading}>About</h1>
+      <h1 className="pageHeading">About</h1>
       {contentArr.map((content, i) => {
         return (
           <TextSection
