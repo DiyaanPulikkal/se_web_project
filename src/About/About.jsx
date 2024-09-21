@@ -83,11 +83,7 @@ function About() {
 
   return (
     <div className={style.spacebelowInAbout}>
-<<<<<<< Updated upstream
-      <h1 className="pageHeading">About</h1>
-=======
       {/* <h1 className={style.heading}>About</h1> */}
->>>>>>> Stashed changes
       {contentArr.map((content, i) => {
         return (
           <TextSection

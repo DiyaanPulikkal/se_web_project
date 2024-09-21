@@ -8,7 +8,7 @@
     height: 100%;
     width: 100%;
     object-fit:cover;
-    filter: brightness(0.85);
+    filter: brightness(0.80);
 
 }
 
@@ -18,7 +18,7 @@
     left: 50%; /* Move text horizontally to the middle */
     transform: translate(-40%, -60%); /* Center the text exactly */
     font-weight: bold; /* Make the text bold */
-    text-shadow: 5px 5px 8px rgb(0, 0, 0);
+    text-shadow: 5px 5px 5px rgb(0, 0, 0);
     width: 100%; /* Make the text span the entire width */
 }
 
@@ -37,7 +37,44 @@
     font-size: 1.5rem; /* Increase font size */
     color: white; /* Change text color to contrast the image */
     text-align: left;
-    padding-left: 15rem;
+    margin-left: 15rem;
     margin-top: 4rem;
 }
 
+
+.DivOverLink {
+    position: absolute;
+    margin-top: 5vh;
+    margin-left: 16vw;
+    display: inline-block;  
+    transition: all 0.3s ease;
+}
+
+.DivOverLink :hover {
+    cursor: pointer;
+    color: #ccff3e;
+}
+
+.DivOverLink a{
+    color: white; /* Change text color to contrast the image */
+    text-align: left;
+    font-size: 1rem; /* Increase font size */
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+    text-decoration: none;
+}
+
+
+
+.DivOverLink button {
+    margin-left: 1vw;
+    background-color: #FFFFFE;
+    border-radius: 50%;
+}
+
+.DivOverLink a:hover, .DivOverLink button:hover{
+    color: #FF7F3E;
+    cursor: pointer;
+    transform: scale(1.1); /* Slightly enlarge the button */
+    transition: all 0.3s ease;
+}
