@@ -88,7 +88,7 @@ function Program(){
                         </div>
                     </div>
                     <div className={style.linkExploreMorediv}>  
-                        <p>For more information: <a href="https://www.gla.ac.uk" target="_blank">visit university of glasgow website here</a></p>
+                        <p>For more information: <a href="https://www.gla.ac.uk" target="_blank">visit University of Glasgow website here</a></p>
                     </div>
                 </div>
             </div>
@@ -145,7 +145,7 @@ function Program(){
                         </div>
                     </div>
                     <div className={style.linkExploreMorediv}>  
-                        <p>For more information: <a href="https://www.uq.edu.au" target="_blank">visit the university of queensland website here</a></p>
+                        <p>For more information: <a href="https://www.uq.edu.au" target="_blank">visit the University of Queensland website here</a></p>
                     </div>
                 </div>
             </div>
