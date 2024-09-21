@@ -7,7 +7,23 @@ import kmitl_img from "./kmitl_college.jpg";
 import kmitl_insert from "./kmitl_image_insertToweb.jpg";
 import se_software_insert from "./gimmic_se.jpg";
 import se_software_insert2 from "./software_insert.jpg";
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 function Program() {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.getElementById(hash.replace('#', ''));
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }
+    }
+  }, [hash]);
   // Smooth scrolling to lick element
   const smoothScroll = (event, id) => {
     event.preventDefault(); // Prevent default link behavior

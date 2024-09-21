@@ -47,13 +47,8 @@
     margin-top: 5vh;
     margin-left: 16vw;
     display: inline-block;  
-    transition: all 0.3s ease;
 }
 
-.DivOverLink :hover {
-    cursor: pointer;
-    color: #ccff3e;
-}
 
 .DivOverLink a{
     color: white; /* Change text color to contrast the image */
@@ -62,6 +57,7 @@
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 
@@ -70,11 +66,13 @@
     margin-left: 1vw;
     background-color: #FFFFFE;
     border-radius: 50%;
+    transition: all 0.3s ease; /* Smooth transition */
+    border: none; /* Remove border */
 }
 
-.DivOverLink a:hover, .DivOverLink button:hover{
-    color: #FF7F3E;
-    cursor: pointer;
+.DivOverLink:hover a, 
+.DivOverLink:hover button {
+    color: #FF7F3E; /* Change both text and button color */
     transform: scale(1.1); /* Slightly enlarge the button */
-    transition: all 0.3s ease;
+    cursor: pointer;
 }
