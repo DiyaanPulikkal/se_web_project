@@ -45,9 +45,22 @@
 .fortextface {
     text-decoration: none;
     color: black;
+    position: relative;
 }
 
 .fortextface:hover {
     color: #3b5998;
     cursor: pointer;
+}
+
+.copiedPopup {
+    position: absolute;
+    background-color: #6a9c89a3;
+    color: white;
+    padding: 5px;
+    font-size: 10px;
+    border-radius: 5px;
+    top: -10px;
+    left: 25px;
+    white-space: nowrap;
 }
