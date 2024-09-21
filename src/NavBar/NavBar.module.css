@@ -1,90 +1,90 @@
-.mainNav{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    background-color:  #f2672a;
-    display: flex;
-    box-sizing: border-box;
-    border-bottom: 3px rgb(76, 73, 73);
+.mainNav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: #f2672a;
+  display: flex;
+  box-sizing: border-box;
+  border-bottom: 3px rgb(76, 73, 73);
 }
 
-.mainNav h2{
-    position: relative;
-    left: 11vw;
-    margin-top: 1vh;
-    margin-bottom: 0px;
-    font-size: 2rem;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: bold;
-    color: #FFFFFF;
-    text-shadow: 0 0 0.5rem black;
+.mainNav h2 {
+  position: relative;
+  left: 11vw;
+  margin-top: 1vh;
+  margin-bottom: 0px;
+  font-size: 2rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 0 0.5rem black;
 }
 
-.listDiv{
-    display: flex;
-    margin-top: 4vh;
+.listDiv {
+  display: flex;
+  margin-top: 4vh;
 }
 
 .mainNav ul {
-    list-style: none;
-    display: flex;
-    margin-left: 8vw;
+  list-style: none;
+  display: flex;
+  margin-left: 8vw;
 }
 
 .mainNav ul li {
-    font-size: 1.5rem;
-    text-decoration: none;
+  font-size: 1.5rem;
+  text-decoration: none;
 }
 
 .logo {
-    position: absolute;
-    top: 1vh;
-    left: 2vw;
-    width:9.2vw;
-    height: 9.2vw;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: box-shadow 0.5s;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.51);
+  position: absolute;
+  top: 1vh;
+  left: 2vw;
+  width: 9.2vw;
+  height: 9.2vw;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: box-shadow 0.5s;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.51);
 }
 
 .mainNav img:hover {
-    box-shadow: none;
+  box-shadow: none;
 }
 
-
 .textLink {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    padding: 0.7vh 2.5vw;
-    margin-left: 1.3vw;
-    text-decoration: none;
-    color: white;
-    transition: background-color 0.35s;
-    border-right: 0.2vw solid white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding: 0.7vh 2.5vw;
+  margin-left: 1.3vw;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.35s;
+  border-right: 0.2vw solid white;
 }
 
 .textLink:hover {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 
 .login_link {
-    display: flex;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: white;
-    margin-left: 6vw;
+  display: flex;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: white;
+  margin-left: 6vw;
 }
 
 .login_link img {
-    vertical-align: middle;
-    width: 3.5vh;
-    height: 3.5vh;
-    margin-right: 0.5rem;
+  vertical-align: middle;
+  width: 3.5vh;
+  height: 3.5vh;
+  margin-right: 0.5rem;
 }
 
 .login_link:hover {
-    color: #585859;
+  color: #585859;
 }
-
-
