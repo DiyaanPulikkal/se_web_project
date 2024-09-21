@@ -24,6 +24,11 @@
     width: 2vw;
 }
 
+.mainFooter a:hover {
+    color: black;
+
+}
+
 .container{
     display: grid;
     grid-template-columns: 1fr 1fr;
