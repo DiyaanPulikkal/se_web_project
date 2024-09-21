@@ -265,7 +265,7 @@
     border-radius: 2rem;
     font-size: 1.5rem;
     margin-left: 27.5vw;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
     border: 0;
     color: white;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif;
@@ -285,4 +285,5 @@
 .skillMapping:hover {
     background-color: #7C9D96;
     cursor: pointer;
+    transform: scale(1.1);
 }
