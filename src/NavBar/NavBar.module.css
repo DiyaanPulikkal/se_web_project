@@ -7,6 +7,7 @@
   display: flex;
   box-sizing: border-box;
   border-bottom: 3px rgb(76, 73, 73);
+  z-index: 2;
 }
 
 .mainNav h2 {
