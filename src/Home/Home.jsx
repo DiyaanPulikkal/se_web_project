@@ -9,6 +9,12 @@ import Glasgowuniver from './gasglowUni.jpg';
 import KingMongkut from './kmitlUni.jpg';
 import Queenlanduniver from './queenlandUni.jpg';
 
+// import slide 3 component
+import SlideEvent from './SlideEvent/SlideEvent.jsx'
+// import Slider from "react-slick";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+
 
 // import tuitionfee image
 import tuitionFee from './tuitionFee.png';
@@ -59,27 +65,27 @@ function Home() {
     <>
 
       <Carousel
-          autoPlay       // Carousel auto-scrolls to the next slide
-          infiniteLoop   // Loop slides infinitely
-          showThumbs={false} // Hide thumbnails
-          showStatus={false} // Hide status like "1 of 3"
-          showArrows={true}  // Show navigation arrows
-          transitionTime={1000}
-          interval={8000} // Slide changes every 5 seconds
-          swipeable={true}  // Allow swipe on touch devices
+        autoPlay       // Carousel auto-scrolls to the next slide
+        infiniteLoop   // Loop slides infinitely
+        showThumbs={false} // Hide thumbnails
+        showStatus={false} // Hide status like "1 of 3"
+        showArrows={true}  // Show navigation arrows
+        transitionTime={1000}
+        interval={8000} // Slide changes every 5 seconds
+        swipeable={true}  // Allow swipe on touch devices
         // emulateTouch={true} // Emulate touch on desktop
-          renderArrowPrev={customPrevArrow} // Apply custom prev button
-          renderArrowNext={customNextArrow} // Apply custom next button
-        >
-          <div>
-            <img src={AI_slide} alt="AI" className={style.imageFirstSlide}/>
-          </div>
-          <div>
-            <AboutSlide />
-          </div>
-          <div>
-            <AdmissionSlide />
-          </div>
+        renderArrowPrev={customPrevArrow} // Apply custom prev button
+        renderArrowNext={customNextArrow} // Apply custom next button
+      >
+        <div>
+          <img src={AI_slide} alt="AI" className={style.imageFirstSlide} />
+        </div>
+        <div>
+          <AboutSlide />
+        </div>
+        <div>
+          <AdmissionSlide />
+        </div>
 
       </Carousel>
 
@@ -87,42 +93,42 @@ function Home() {
 
 
       <div className={style.divContainHeadandSub}>
-            <h1 className={style.headText}>" SOFTWARE can change the World "</h1>
-            <p className={style.subText}>Empowering the future through innovative software engineering, <br /> we are dedicated to building solutions that <br /> enhance our department's impact on the world.</p>
+        <h1 className={style.headText}>" SOFTWARE can change the World "</h1>
+        <p className={style.subText}>Empowering the future through innovative software engineering, <br /> we are dedicated to building solutions that <br /> enhance our department's impact on the world.</p>
       </div>
 
       <div className={style.insertedText}>
-          <div className={style.divContainJobDes}>
-            <div className={style.divContainWebDeveloper}>
-              <img src={webIm} alt="web development" />
-              <h1>Web Developer</h1>
-              <p>Creates responsive websites and web applications, focusing on user experience and performance.</p>
-            </div>
-              
-            <div className={style.divContainorders}>
-              <img src={mobileIm} alt="mobile development" />
-              <h1>Mobile Application Developer</h1>
-              <p>Builds user-friendly applications for iOS and Android, using native or cross-platform tools.</p>
-            </div>
-
-            <div className={style.divContainorders}>
-              <img src={cyber} alt="network security" />
-              <h1>Network Security Engineer</h1>
-              <p>Protects networks from cyber threats by implementing security measures and monitoring vulnerabilities.</p>
-            </div>
-
-            <div className={style.divContainorders}>
-              <img src={ai} alt="artificial intelligence" />
-              <h1>Artificial Intelligence Engineer</h1>
-              <p>Develops intelligent systems using machine learning and deep learning to solve complex problems.</p>
-            </div>
+        <div className={style.divContainJobDes}>
+          <div className={style.divContainWebDeveloper}>
+            <img src={webIm} alt="web development" />
+            <h1>Web Developer</h1>
+            <p>Creates responsive websites and web applications, focusing on user experience and performance.</p>
           </div>
 
-          
-          <a target="_blank" href = {'https://skill-mapping.kmitl.ac.th/curriculum/01039'}><button className={style.skillMapping}><img src = {CirMap}  alt="circle graph" />View More Skill Mapping</button></a>
-          
-          
-      
+          <div className={style.divContainorders}>
+            <img src={mobileIm} alt="mobile development" />
+            <h1>Mobile Application Developer</h1>
+            <p>Builds user-friendly applications for iOS and Android, using native or cross-platform tools.</p>
+          </div>
+
+          <div className={style.divContainorders}>
+            <img src={cyber} alt="network security" />
+            <h1>Network Security Engineer</h1>
+            <p>Protects networks from cyber threats by implementing security measures and monitoring vulnerabilities.</p>
+          </div>
+
+          <div className={style.divContainorders}>
+            <img src={ai} alt="artificial intelligence" />
+            <h1>Artificial Intelligence Engineer</h1>
+            <p>Develops intelligent systems using machine learning and deep learning to solve complex problems.</p>
+          </div>
+        </div>
+
+
+        <a target="_blank" href={'https://skill-mapping.kmitl.ac.th/curriculum/01039'}><button className={style.skillMapping}><img src={CirMap} alt="circle graph" />View More Skill Mapping</button></a>
+
+
+
       </div>
 
 
@@ -132,7 +138,7 @@ function Home() {
 
       <div className={style.programdiv}>
         <h1 className={style.headerOfProgram}>Explore Programs</h1>
-        
+
         <div className={style.innerProgramDiv}>
           <div className={style.divGlasgowUni}>
             <Link to="/program#Glasgow">
@@ -140,9 +146,9 @@ function Home() {
             </Link>
             <h1>The University of Glasgow</h1>
           </div>
-          
+
           <div className={style.divKMITLandQueenland}>
-            <div className={style.divKmitl}>    
+            <div className={style.divKmitl}>
               <Link to="/program#KMITL">
                 <img src={KingMongkut} alt="KMITL" />
               </Link>
@@ -154,10 +160,10 @@ function Home() {
               </Link>
               <h1>The University of Queenland</h1>
             </div>
-          
+
           </div>
         </div>
-        
+
       </div>
 
 
@@ -167,17 +173,24 @@ function Home() {
           <img src={tuitionFee} alt="tuition fee" />
         </div>
         <div className={style.divContainTextOfTuitionFee}>
-          <h1 className={style.tuitionFee}>Tuition Fees</h1>
           <div className={style.tuitionFeeLine}>
-            <h1>90,000</h1>
-            <p>Baht / Semester</p>
+            <h1 className={style.tuitionFee}>Tuition Fees&nbsp;&nbsp;</h1>
+            <h1 className={style.moneyLine}>90,000</h1>
+            <p>&nbsp;Baht / Semester</p>
           </div>
         </div>
 
       </div>
 
 
-      
+
+
+
+
+      {/* Show 3 slide for events */}
+      <div className={style.slider}>
+        <SlideEvent />
+      </div>
 
 
 

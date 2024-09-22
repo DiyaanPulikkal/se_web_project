@@ -1,0 +1,131 @@
+/* image and text inslide */
+.slide {
+    
+    background-color: #2d292952;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 5vh;
+    transition: transform 0.3s ease;
+    margin-bottom: 5vh;
+    justify-content: center; /* Center vertically */
+    align-items: center;     /* Center horizontally */
+    line-height: 1;
+}
+
+.slideImage {
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
+    margin-bottom: 10px;
+    background-color: rgb(185, 156, 117);
+}
+
+.slideDate {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif; 
+    font-size: 1em;
+    color: white;
+    margin-top: 2vh;
+}
+.slideLocation {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif; 
+    font-size: 1em;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 3vh;
+
+}
+
+.slide:hover {
+    transform: scale(1.05);
+}
+
+.divCoverIconNLocation {
+    display: flex;
+    justify-content: center;
+    align-items:normal;
+    margin-top: 2vh;
+}
+
+.slideIcon {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5vw;
+}
+/* On smaller screens, reduce padding and text size */
+/* @media (max-width: 768px) {
+    .slide {
+        padding: 10px;
+    }
+
+    .slide-date,
+    .slide-location {
+        font-size: 0.1em;
+    }
+} */
+
+/* end */
+
+
+/* style arrow left and right */
+.customPrevArrow,
+.customNextArrow {
+    background-color: transparent;
+    /* No background */
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 2;
+    padding: 0;
+    /* Remove padding */
+}
+
+.customPrevArrow {
+    left: 1px;
+    /* Position the previous button */
+}
+
+.customNextArrow {
+    right: 1px;
+    /* Position the next button */
+}
+
+/* Add styles for the image inside the buttons */
+.arrowImage {
+    width: 40px;
+    /* Customize image size */
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+    /* Smooth transform transition */
+}
+
+/* Fade effect */
+.customPrevArrow,
+.customNextArrow {
+    opacity: 0.7;
+    /* Slightly transparent */
+    transform: scale(1);
+    /* Default scale */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    /* Smooth transition for both opacity and transform */
+}
+
+.customPrevArrow:hover,
+.customNextArrow:hover {
+    opacity: 1;
+    /* Fully opaque on hover */
+    transform: scale(1.2);
+}
+
+
+.customPrevArrow:hover .arrowImage {
+    transform: translateX(-5px);
+    /* Slide image left */
+}
+
+.customNextArrow:hover .arrowImage {
+    transform: translateX(5px);
+    /* Slide image right */
+}
+/* end */
