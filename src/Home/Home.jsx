@@ -9,6 +9,10 @@ import Glasgowuniver from './gasglowUni.jpg';
 import KingMongkut from './kmitlUni.jpg';
 import Queenlanduniver from './queenlandUni.jpg';
 
+
+// import tuitionfee image
+import tuitionFee from './tuitionFee.png';
+
 import AI_slide from './AI_slide.jpg';
 
 // import image for insert text skill mapping
@@ -154,6 +158,22 @@ function Home() {
           </div>
         </div>
         
+      </div>
+
+
+
+      <div className={style.divContainTuitionFee}>
+        <div className={style.divContainImageOfTuitionFee}>
+          <img src={tuitionFee} alt="tuition fee" />
+        </div>
+        <div className={style.divContainTextOfTuitionFee}>
+          <h1 className={style.tuitionFee}>Tuition Fees</h1>
+          <div className={style.tuitionFeeLine}>
+            <h1>90,000</h1>
+            <p>Baht / Semester</p>
+          </div>
+        </div>
+
       </div>
 
 

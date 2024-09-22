@@ -64,9 +64,9 @@
 
 /* Program div */
 .programdiv {
-    margin-top: 25vh;
+    margin-top: 15vh;
     margin-left: 10vw;
-    margin-bottom: 25vh;
+    margin-bottom: 15vh;
 }
 
 .headerOfProgram {
@@ -335,4 +335,66 @@
     cursor: pointer;
     transform: scale(1.1);
     
+}
+
+
+
+/* Tuition Fee */
+.divContainTuitionFee {
+    display: flex;
+    justify-content: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    background-color: #eeeeee;
+    width: auto;
+    text-align: center;
+    margin-left: 10vw;
+    margin-right: 10vw;
+
+    
+}
+.divContainImageOfTuitionFee {
+    width: 25vw;
+    height: 100%;
+    /* background-color: #c3a5928f; */
+    text-align: right;
+}
+.divContainImageOfTuitionFee img {
+    width: 45%;
+    height: 50%;
+    /* transition: all 0.25s ease-in-out; */
+    /* background-color: #FF7D29; */
+    object-fit: cover;
+}
+.divContainTextOfTuitionFee {
+    width: 35vw;
+    height: 100%;
+    /* background-color: #c3a5928f; */
+    margin-left: 2vw;
+    line-height: 0.1vh;
+    text-align: left;
+}
+.tuitionFee {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif;
+    color: #94B49F;
+    font-size: 3rem;
+}
+
+.tuitionFeeLine {
+    display: flex;
+    align-items:baseline;
+    font-style: italic; /* Tilted text */
+}
+
+.tuitionFeeLine p {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif;
+    color: #1A4D2E;
+    font-size: 1.25rem;   
+    margin-left: 1rem;
+}
+.tuitionFeeLine h1 {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif;
+    color: #EA5C2B  ;
+    font-size: 5rem;
+    font-style: italic;
 }
