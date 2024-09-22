@@ -81,8 +81,6 @@
     width: 80vw;
     height: 80vh;
     /* background-color: #a4a0a0; */
-    
-
 }
 /* glasgow */
 .divGlasgowUni {
@@ -90,22 +88,37 @@
     height: 100%;
     justify-content: center;
     margin-top: 2rem;
+    position:relative;
     /* background-color: rgba(171, 200, 200, 0.54); */
 }
-
 .divGlasgowUni img {
     width: 100%;
     height: 90%;
     object-fit: cover;
     border-radius: 30px;
+    transition: all 0.25s ease-in-out;
 }
-
+.divGlasgowUni:hover img {
+    filter: blur(2px); /* Apply blur on hover */
+    transform: scale(1.05); /* Smoothly increase the image size */
+    box-shadow: #A9A9A9 20px 20px 20px; /* Add shadow on hover */
+}
 .divGlasgowUni h1 {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif; 
-    color: #000;
+    color: white;
     font-size: 1rem;
     margin-top: 1vh;
     text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Initially hidden */
+    transition: all 0.25s ease-in-out;
+}
+.divGlasgowUni:hover h1 {
+    opacity: 1; /* Fade in text on hover */
+    font-size: 1.25rem; /* Optionally increase text size */
 }
 /* end gasglow */
 
@@ -119,6 +132,7 @@
     margin-left: 5vh;
 }
 .divKmitl {
+    position:relative;
     height: 50%;
     /* background-color: #dc4343; */
 }
@@ -127,18 +141,35 @@
     height: 90%;
     object-fit: cover;
     border-radius: 30px;
+    transition: all 0.25s ease-in-out;
+}
+.divKmitl:hover img {
+    filter: blur(2px); /* Apply blur on hover */
+    transform: scale(1.05); /* Smoothly increase the image size */
+    box-shadow: #A9A9A9 20px 20px 20px; /* Add shadow on hover */
 }
 .divKmitl h1 {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif; 
-    color: #000;
+    color: white;
     font-size: 1rem;
     margin-top: 1vh;
     text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Initially hidden */
+    transition: all 0.25s ease-in-out;
+}
+.divKmitl:hover h1 {
+    opacity: 1; /* Fade in text on hover */
+    font-size: 1.25rem; /* Optionally increase text size */
 }
 /* end kmitl */
 
 /* Queenland */
 .divQueenland {
+    position:relative;
     height: 50%;
     /* background-color: #89d060dc; */
     margin-top: 2vh;
@@ -148,14 +179,31 @@
     height: 80%;
     object-fit: cover;
     border-radius: 30px;
+    transition: all 0.25s ease-in-out;
+}
+.divQueenland:hover img {
+    filter: blur(2px); /* Apply blur on hover */
+    transform: scale(1.05); /* Smoothly increase the image size */
+    box-shadow: #A9A9A9 20px 20px 20px; /* Add shadow on hover */
 }
 .divQueenland h1 {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif; 
-    color: #000;
+    color: white;
     font-size: 1rem;
     margin-top: 1vh;
     text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Initially hidden */
+    transition: all 0.25s ease-in-out;
 }
+.divQueenland:hover h1 {
+    opacity: 1; /* Fade in text on hover */
+    font-size: 1.25rem; /* Optionally increase text size */
+}
+
 /* end Queenland */
 
 
@@ -278,7 +326,7 @@
     width: 2rem;
     height: 2rem;
     margin-right: 0.5rem;
-    vertical-align: middle; /* Ensures image aligns well with the text */
+    vertical-align: middle; /* Ensures image aligns well with the text */    
 }
 
 
@@ -286,4 +334,5 @@
     background-color: #7C9D96;
     cursor: pointer;
     transform: scale(1.1);
+    
 }
