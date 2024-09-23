@@ -1,10 +1,9 @@
 /* slide */
 .imageFirstSlide {
     height: 100vh;
-    object-fit:cover;
+    object-fit: cover;
     width: 100vw;
     filter: brightness(0.9);
-
 }
 .customPrevArrow,
 .customNextArrow {
@@ -232,7 +231,7 @@
 }
 .subText {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif; 
-    color: rgb(55, 53, 53);
+    color: #404043;
     font-size: 1.5rem;
     margin-top: 1vh;
     text-align: center;
@@ -267,7 +266,7 @@
 }
 .divContainWebDeveloper p {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif; 
-    color: #000;
+    color: #404043;
     font-size: 1rem;
     margin-top: 6vh;
     text-align: center;
@@ -406,9 +405,11 @@
 .slider {
     width: auto;
     height: auto;
-    margin-left: 3vw;
-    margin-right: 3vw;
     padding-top: 15vh;
     padding-bottom: 15vh;
     background-color: #0254643c;
+    margin-top: 10vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    margin-bottom: 15vh;
 }

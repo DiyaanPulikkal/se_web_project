@@ -1,55 +1,86 @@
 /* image and text inslide */
+.containAll {
+    position: relative; 
+    /* background-color: #0000009a; */
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    height: auto;
+    padding-bottom: 10vh;
+
+}
 .slide {
-    
-    background-color: #2d292952;
-    border-radius: 10px;
+    width: 100%; /* Make sure the slide takes full width */
+    height: 50vh; /* Set a fixed height for the slide */
+    background-color: #ffffffd9;
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
     text-align: center;
     padding-top: 5vh;
-    transition: transform 0.3s ease;
-    margin-bottom: 5vh;
+    transition: transform 0.3s ease-in, background-color 0.3s ease-in-out;
     justify-content: center; /* Center vertically */
     align-items: center;     /* Center horizontally */
     line-height: 1;
-}
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    box-shadow: 0 0 30px rgb(134, 131, 131);
+    border: #000000;
 
+}
+.slide:hover {
+    transform: scale(1.05);
+    background-color: #fc9f53;
+    z-index: 10;
+}
+.slide:hover p{
+    transform: scale(1.05);
+    color: white;
+    z-index: 10;
+}
 .slideImage {
-    width: 50%;
-    height: auto;
-    margin-left: 25%;
-    margin-bottom: 10px;
-    background-color: rgb(185, 156, 117);
+    width: auto;
+    height: 75%;
+    object-fit: cover; /* Ensures the image maintains its aspect ratio without distortion */
+    margin: auto;
+    margin-bottom: 2vh;
 }
 
 .slideDate {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif; 
     font-size: 1em;
-    color: white;
+    color: #404043;
     margin-top: 2vh;
+    margin-bottom: 2vh;
+    transition: color 0.3s ease-in-out;
+    /* background-color: rgba(250, 128, 114, 0.581); */
 }
 .slideLocation {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif; 
     font-size: 1em;
-    color: white;
+    color: #404043;
     margin-top: 0;
     margin-bottom: 3vh;
+    transition: color 0.3s ease-in-out;
+    /* background-color: rgba(250, 128, 114, 0.581); */
 
 }
 
-.slide:hover {
-    transform: scale(1.05);
-}
+
+
+
 
 .divCoverIconNLocation {
     display: flex;
+    gap: 0.5vw;
     justify-content: center;
     align-items:normal;
     margin-top: 2vh;
+    /* background-color:rgba(0, 255, 255, 0.57); */
 }
 
 .slideIcon {
     width: 20px;
     height: 20px;
-    margin-right: 0.5vw;
+    /* background-color: rgba(81, 106, 106, 0.57); */
 }
 /* On smaller screens, reduce padding and text size */
 /* @media (max-width: 768px) {
@@ -79,6 +110,14 @@
     z-index: 2;
     padding: 0;
     /* Remove padding */
+
+/* Fade effect */
+    opacity: 0.7;
+    /* Slightly transparent */
+    transform: scale(1);
+    /* Default scale */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    /* Smooth transition for both opacity and transform */
 }
 
 .customPrevArrow {
@@ -100,16 +139,6 @@
     /* Smooth transform transition */
 }
 
-/* Fade effect */
-.customPrevArrow,
-.customNextArrow {
-    opacity: 0.7;
-    /* Slightly transparent */
-    transform: scale(1);
-    /* Default scale */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    /* Smooth transition for both opacity and transform */
-}
 
 .customPrevArrow:hover,
 .customNextArrow:hover {
@@ -129,3 +158,55 @@
     /* Slide image right */
 }
 /* end */
+
+
+
+
+/* Link More information */
+.DivOverLink {
+    position: absolute;
+    right: 1vw;  
+    padding-bottom: 1vh;
+    /* background-color: rgba(245, 245, 220, 0.644); */
+}
+.DivOverLink a{
+    color: rgb(0, 0, 0); /* Change text color to contrast the image */
+    text-align: left;
+    font-size: 1rem; /* Increase font size */
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.DivOverLink button {
+    margin-left: 1vw;
+    background-color: #025464;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+    border: none; /* Remove border */
+    color: #fffffe;
+}
+.DivOverLink:hover a, 
+.DivOverLink:hover button {
+    color: #FF7F3E; /* Change both text and button color */
+    transform: scale(1.1); /* Slightly enlarge the button */
+    cursor: pointer;
+}
+.DivOverLink:hover button {
+    background-color: #b8e0bd; /* Change button color */
+}
+/* end */
+
+
+
+/* head Upcming Event */
+.headUpcomingEvent {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+    font-size: 2.5rem;
+    color: #000000;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+    text-align: center;
+}
+

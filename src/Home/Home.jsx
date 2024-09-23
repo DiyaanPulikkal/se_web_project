@@ -1,5 +1,6 @@
-import AboutSlide from "./aboutInSlide.jsx";
-import AdmissionSlide from "./AdmissionInSlide.jsx";
+import AboutSlide from "./AboutSlider/aboutInSlide.jsx";
+import AdmissionSlide from "./AdmissionSlider/AdmissionInSlide.jsx";
+import HeaderSE from "./HeaderSeSlider/HeaderInSlide.jsx";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useState } from "react";
@@ -18,8 +19,6 @@ import SlideEvent from './SlideEvent/SlideEvent.jsx'
 
 // import tuitionfee image
 import tuitionFee from './tuitionFee.png';
-
-import AI_slide from './AI_slide.jpg';
 
 // import image for insert text skill mapping
 import webIm from './frontEnd.png';
@@ -78,7 +77,7 @@ function Home() {
         renderArrowNext={customNextArrow} // Apply custom next button
       >
         <div>
-          <img src={AI_slide} alt="AI" className={style.imageFirstSlide} />
+          <HeaderSE />
         </div>
         <div>
           <AboutSlide />
@@ -188,9 +187,9 @@ function Home() {
 
 
       {/* Show 3 slide for events */}
-      <div className={style.slider}>
+      {/* <div className={style.slider}> */}
         <SlideEvent />
-      </div>
+      {/* </div> */}
 
 
 

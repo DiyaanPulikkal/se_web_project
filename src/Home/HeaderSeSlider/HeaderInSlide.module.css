@@ -1,0 +1,40 @@
+.divcontainImageheader {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.divcontainImageheader img {
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+
+}
+
+.textOverheaderPic {
+    position: absolute;
+    top: 50%; /* Move text vertically to the middle */
+    left: 50%; /* Move text horizontally to the middle */
+    transform: translate(-25%, 10%); /* Center the text exactly */
+    font-weight: bold; /* Make the text bold */
+    text-shadow: 5px 5px 5px rgb(0, 0, 0);
+    width: 100%; /* Make the text span the entire width */
+}
+
+.textOverheaderPic h1 {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+    font-size: 3.5rem; /* Increase font size */
+    color: white; /* Change text color to contrast the image */
+    padding-left: 0;
+    text-align: left;
+}
+
+.textOverheaderPic p {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+    font-size: 1rem; /* Increase font size */
+    color: white; /* Change text color to contrast the image */
+    right: auto;
+    margin-top: 1vh;
+}

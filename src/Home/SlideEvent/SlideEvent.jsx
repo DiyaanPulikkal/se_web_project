@@ -6,6 +6,7 @@ import nextArrowImage from './rightArrow.png'; // Path to your next button image
 import style from "./SlideEvent.module.css";
 import hackathon from './AIhackathon.jpg';
 import mapping from './map.png';
+import { Link } from "react-router-dom";
 
 
 
@@ -85,23 +86,11 @@ function SlideEvent() {
             imageUrl: "https://via.placeholder.com/150",
             icon: mapping,
         },
-        {
-            date: "27 August 2025",
-            location: "KMITL",
-            imageUrl: "https://via.placeholder.com/150",
-            icon: mapping,
-        },
-        {
-            date: "28 August 2025",
-            location: "KMITL",
-            imageUrl: "https://via.placeholder.com/150",
-            icon: mapping,
-        },
     ];
     //end
     return (
-        <div>
-            <h1>Upcoming Event</h1>
+        <div className = {style.containAll}>
+            <h1 className={style.headUpcomingEvent}>Upcoming Event</h1>
             <Slider {...settings}>
                 {events.map((event, index) => (
                     <div key={index} className={style.slide}>
@@ -114,6 +103,12 @@ function SlideEvent() {
                     </div>
                 ))}
             </Slider>
+            <div className={style.DivOverLink}>
+                    <Link to="/activities">
+                        Read More
+                        <button >&#62;</button>
+                    </Link>
+            </div>
         </div>
 
     )
