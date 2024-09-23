@@ -1,6 +1,10 @@
 import style from "./About.module.css";
 import TextSection from "./TextSection.jsx";
+import { useEffect } from 'react';
 function About() {
+  useEffect(() => {
+      window.scrollTo(0, 0); // Scroll to the top of the page when the component loads
+  }, []);
   const heading1 = "What is Software Engineering?";
   const content1 = (
     <p>

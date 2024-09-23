@@ -1,0 +1,414 @@
+/* slide */
+.imageFirstSlide {
+    height: 100vh;
+    object-fit:cover;
+    width: 100vw;
+    filter: brightness(0.9);
+
+}
+.customPrevArrow,
+.customNextArrow {
+  background-color: transparent; /* No background */
+  border: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+  padding: 0; /* Remove padding */
+}
+
+.customPrevArrow {
+  left: 15px; /* Position the previous button */
+}
+
+.customNextArrow {
+  right: 15px; /* Position the next button */
+}
+
+/* Add styles for the image inside the buttons */
+.arrowImage {
+  width: 40px; /* Customize image size */
+  height: 40px;
+  transition: transform 0.3s ease-in-out; /* Smooth transform transition */
+}
+
+/* Fade effect */
+.customPrevArrow, .customNextArrow {
+    opacity: 0.7; /* Slightly transparent */
+    transform: scale(1); /* Default scale */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for both opacity and transform */
+}
+.customPrevArrow:hover, .customNextArrow:hover {
+    opacity: 1; /* Fully opaque on hover */
+    transform: scale(1.2);
+}
+
+
+.customPrevArrow:hover .arrowImage {
+    transform: translateX(-5px); /* Slide image left */
+  }
+  
+  .customNextArrow:hover .arrowImage {
+    transform: translateX(5px); /* Slide image right */
+  }
+
+
+/* End Slide */
+
+
+
+
+
+
+
+/* Program div */
+.programdiv {
+    margin-top: 15vh;
+    margin-left: 10vw;
+    margin-bottom: 15vh;
+}
+
+.headerOfProgram {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif; 
+    color: #000;
+    margin-bottom: 3vh;
+    font-size: 2.5rem;
+}
+
+.innerProgramDiv {
+    display: flex;
+    width: 80vw;
+    height: 80vh;
+    /* background-color: #a4a0a0; */
+}
+/* glasgow */
+.divGlasgowUni {
+    width: 25vw;
+    height: 100%;
+    justify-content: center;
+    position:relative;
+    /* background-color: rgba(171, 200, 200, 0.54); */
+}
+.divGlasgowUni img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 30px;
+    transition: all 0.25s ease-in-out;
+}
+.divGlasgowUni:hover img {
+    filter: blur(2px); /* Apply blur on hover */
+    transform: scale(1.05); /* Smoothly increase the image size */
+    box-shadow: #A9A9A9 20px 20px 20px; /* Add shadow on hover */
+}
+.divGlasgowUni h1 {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif; 
+    color: white;
+    font-size: 1rem;
+    margin-top: 1vh;
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Initially hidden */
+    transition: all 0.25s ease-in-out;
+}
+.divGlasgowUni:hover h1 {
+    opacity: 1; /* Fade in text on hover */
+    font-size: 1.25rem; /* Optionally increase text size */
+}
+/* end gasglow */
+
+/* KMITL and Queen*/
+/* Kmitl */
+.divKMITLandQueenland {
+    width: 50vw;
+    height: 100%;
+    justify-content: center;
+    /* background-color: #a4a0a063; */
+    margin-left: 5vh;
+}
+.divKmitl {
+    position:relative;
+    height: 50%;
+    /* background-color: #dc4343; */
+}
+.divKmitl img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 30px;
+    transition: all 0.25s ease-in-out;
+}
+.divKmitl:hover img {
+    filter: blur(2px); /* Apply blur on hover */
+    transform: scale(1.05); /* Smoothly increase the image size */
+    box-shadow: #A9A9A9 20px 20px 20px; /* Add shadow on hover */
+}
+.divKmitl h1 {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif; 
+    color: white;
+    font-size: 1rem;
+    margin-top: 1vh;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Initially hidden */
+    transition: all 0.25s ease-in-out;
+}
+.divKmitl:hover h1 {
+    opacity: 1; /* Fade in text on hover */
+    font-size: 1.25rem; /* Optionally increase text size */
+}
+/* end kmitl */
+
+/* Queenland */
+.divQueenland {
+    position:relative;
+    height: 50%;
+    /* background-color: #89d060dc; */
+}
+.divQueenland img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 30px;
+    transition: all 0.25s ease-in-out;
+}
+.divQueenland:hover img {
+    filter: blur(2px); /* Apply blur on hover */
+    transform: scale(1.05); /* Smoothly increase the image size */
+    box-shadow: #A9A9A9 20px 20px 20px; /* Add shadow on hover */
+}
+.divQueenland h1 {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif; 
+    color: white;
+    font-size: 1rem;
+    margin-top: 1vh;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Initially hidden */
+    transition: all 0.25s ease-in-out;
+}
+.divQueenland:hover h1 {
+    opacity: 1; /* Fade in text on hover */
+    font-size: 1.25rem; /* Optionally increase text size */
+}
+
+/* end Queenland */
+
+
+
+
+/* inserted text */
+.insertedText {
+    width: 80vw;
+    justify-content: center;
+    /* background-color: #a4a0a0; */
+    margin-left: 10vw;
+}
+
+.divContainHeadandSub {
+    width: 100vw;
+    background-color: #eeeeee;
+    margin-top: 15vh;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.headText {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif; 
+    color: #FF7D29;
+    font-size: 2rem;
+    margin-top: 1vh;
+    text-align: center;
+    
+}
+.subText {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif; 
+    color: rgb(55, 53, 53);
+    font-size: 1.5rem;
+    margin-top: 1vh;
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+/* div contain all Job */
+.divContainJobDes {
+    display: flex;
+    justify-content: center;
+    margin-top: 4vh;
+    /* background-color: #ff7f298f; */
+}
+.divContainWebDeveloper {
+    width: 25vw;
+    height: 100%;
+    /* background-color: #c3a5928f; */
+
+}
+.divContainWebDeveloper img {
+    width: 50%;
+    height: 50%;
+    justify-content: center;
+    margin-left: 25%;
+}
+.divContainWebDeveloper h1 {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif; 
+    color: #FF7D29;
+    font-size: 1.5rem;
+    margin-top: 2vh;
+    text-align: center;
+}
+.divContainWebDeveloper p {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif; 
+    color: #000;
+    font-size: 1rem;
+    margin-top: 6vh;
+    text-align: center;
+}
+/* order job except web developer */
+.divContainorders {
+    width: 25vw;
+    height: 100%;
+    /* background-color: #c3a5928f; */
+    margin-left: 2rem;
+
+}
+.divContainorders img {
+    width: 50%;
+    height: 50%;
+    justify-content: center;
+    margin-left: 25%;
+}
+.divContainorders h1 {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif; 
+    color: #FF7D29;
+    font-size: 1.5rem;
+    margin-top: 2vh;
+    text-align: center;
+}
+.divContainorders p {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif; 
+    color: #000;
+    font-size: 1rem;
+    margin-top: 1vh;
+    text-align: center;
+}
+/* end div contain all job */
+
+
+.skillMapping {
+    margin-top: 6vh;
+    background-color: #025464;
+    width: 25vw;
+    height: 7vh;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    margin-left: 27.5vw;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    border: 0;
+    color: white;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif;
+}
+
+.skillMapping a {
+    text-decoration: none;
+}
+.skillMapping img {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+    vertical-align: middle; /* Ensures image aligns well with the text */    
+}
+
+
+.skillMapping:hover {
+    background-color: #7C9D96;
+    cursor: pointer;
+    transform: scale(1.1);
+    
+}
+
+
+
+/* Tuition Fee */
+.divContainTuitionFee {
+    display: flex;
+    justify-content: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    background-color: #eeeeee;
+    width: auto;
+    text-align: center;
+
+
+    
+}
+.divContainImageOfTuitionFee {
+    width: 30%;
+    height: 100%;
+    /* background-color: #c3a5928f; */
+    text-align: right;
+}
+.divContainImageOfTuitionFee img {
+    width: 15vw;
+    height: 50%;
+    /* transition: all 0.25s ease-in-out; */
+    /* background-color: #FF7D29; */
+    object-fit: cover;
+}
+.divContainTextOfTuitionFee {
+    width: 70%;
+    height: 100%;
+    /* background-color: #c3a5928f; */
+    margin-left: 2vw;
+    text-align: left;
+}
+.tuitionFee {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif;
+    color: #94B49F;
+    font-size: 3rem;
+    text-shadow: #6fe3b1 4px 4px 10px; /* Add shadow to text */
+}
+
+.tuitionFeeLine {
+    display: flex;
+    align-items:baseline;
+    font-style: italic; /* Tilted text */
+}
+
+.tuitionFeeLine p {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif;
+    color: #1A4D2E;
+    font-size: 1.25rem;   
+    margin-left: 1rem;
+    text-shadow: #335f44 2px 2px 10px; /* Add shadow to text */
+}
+.moneyLine {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif;
+    color: #EA5C2B  ;
+    font-size: 5rem;
+    font-style: italic;
+    text-shadow: #df945a 2px 2px 10px; /* Add shadow to text */
+}
+
+/* end tuition fee */
+
+
+
+/* Slide event */
+.slider {
+    width: auto;
+    height: auto;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    background-color: #0254643c;
+}
