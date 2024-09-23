@@ -23,7 +23,6 @@
 
 .textExplainArea li {
   line-height: 1.6; /* Increase line height for better spacing between lines */
-  text-align: justify; /* Align the text in a justified manner */
   color: #333; /* Set a clean, dark text color */
 }
 
