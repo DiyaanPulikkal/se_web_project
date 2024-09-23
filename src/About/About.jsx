@@ -14,7 +14,7 @@ function About() {
       testing, and deployment. SE requires profound abstract and logical
       thinking and the application of mathematics, logic, and computer science
       in order to produce efficient and reliable software with the available
-      resources
+      resources.
     </p>
   );
 
