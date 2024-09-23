@@ -169,7 +169,7 @@ function Home() {
 
       <div className={style.divContainTuitionFee}>
         <div className={style.divContainImageOfTuitionFee}>
-          <img src={tuitionFee} alt="tuition fee" />
+          <img src={tuitionFee} alt="tuition fee" className={style.imageFrTuiitionFee}/>
         </div>
         <div className={style.divContainTextOfTuitionFee}>
           <div className={style.tuitionFeeLine}>

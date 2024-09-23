@@ -26,7 +26,7 @@ function Contact() {
   return (
     <>
       <h1 className="pageHeading">Contact Us</h1>
-
+      <hr style={{width: "50%"}}/>
       <div className={style.Mapsection}>
         <h3>Map</h3>
         <MapContainer
