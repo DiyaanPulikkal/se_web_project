@@ -69,19 +69,19 @@ function SlideEvent() {
 
     const events = [
         {
-            date: "24 August 2025",
+            date: "24 August 2024",
             location: "KMITL",
             imageUrl: hackathon, 
             icon: mapping,
         },
         {
-            date: "25 August 2025",
+            date: "25 August 2024",
             location: "KMITL",
             imageUrl: "https://via.placeholder.com/150", // placeholder image
             icon: mapping,
         },
         {
-            date: "26 August 2025",
+            date: "26 August 2024",
             location: "KMITL",
             imageUrl: "https://via.placeholder.com/150",
             icon: mapping,

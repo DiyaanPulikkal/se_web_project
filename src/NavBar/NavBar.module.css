@@ -11,13 +11,14 @@
 }
 
 .mainNav h2 {
+  padding-right: 2vw;
   position: relative;
   left: 11vw;
   margin-top: 1vh;
   margin-bottom: 0px;
   font-size: 2rem;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+                    "Lucida Sans", Arial, sans-serif;
   font-weight: bold;
   color: #ffffff;
   text-shadow: 0 0 0.5rem black;
@@ -59,11 +60,10 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   padding: 0.7vh 2.5vw;
-  margin-left: 1.3vw;
   text-decoration: none;
   color: white;
   transition: background-color 0.35s;
-  border-right: 0.2vw solid white;
+  border-right: 0.2rem solid white;
 }
 
 .textLink:hover {
@@ -76,13 +76,16 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   color: white;
-  margin-left: 6vw;
+  margin-left: 8vw;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.35s;
 }
 
 .login_link img {
   vertical-align: middle;
-  width: 3.5vh;
-  height: 3.5vh;
+  width: 5vh;
+  height: 5vh;
   margin-right: 0.5rem;
 }
 
