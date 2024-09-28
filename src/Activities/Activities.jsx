@@ -1,4 +1,4 @@
-import "./Activities.module.css";
+import style from "./Activities.module.css";
 import ActSection from "./ActSection.jsx";
 
 function Activities() {
@@ -47,8 +47,10 @@ function Activities() {
   return (
     <>
       <h1 className="pageHeading">Activities</h1>
-      <ActSection title="Upcoming" content={upcomingChildren}></ActSection>
-      <ActSection title="Archive" content={archiveChildren}></ActSection>
+      <div className={style.sectionContainer}>
+        <ActSection title="Upcoming" content={upcomingChildren}></ActSection>
+        <ActSection title="Archive" content={archiveChildren}></ActSection>
+      </div>
     </>
   );
 }
