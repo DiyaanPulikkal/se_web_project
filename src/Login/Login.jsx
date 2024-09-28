@@ -7,56 +7,39 @@ function Login() {
       <h1 className={style.head}>Log In</h1>
       <div className={style.backgroundLogin}>
         <form>
-          <br />
-          <img src={ima} alt="Software" className={style.image} />
-          <br />
+          <img src={ima} alt="Software" className={style.imageForlogin}/>
+          <label className={style.textcolor}>
+            Username:
+          </label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="enter e-mail"
+            className={style.customInput}
+          />
 
-          <div className={style.freespace}>
-            <label className={style.textcolor}>
-              Username:&nbsp;
-              <input
-                type="text"
-                name="username"
-                id="username"
-                placeholder="E-mail"
-                className={style.customInput}
-              />
-            </label>
-          </div>
+          <label className={style.textcolor}>
+            Password:
+          </label>
+          
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="********"
+            className={style.customInput}
+          />
 
-          <br />
-          <div className={style.freespace}>
-            <label className={style.textcolor}>
-              Password:&nbsp;&nbsp;
-              <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="********"
-                className={style.customInput}
-              />
-            </label>
-          </div>
-
-          <br />
-          <div align="center">
-            <a href="/forgot" className={style.forget}>
-              Forgot Password
-            </a>
-          </div>
-          <br />
-          <div align="center">
-            <a href="/register" className={style.register}>
-              Register
-            </a>
-          </div>
-          <br />
-          <br />
-          <div align="center">
-            <button type="submit" className={style.buttonst}>
-              Login
-            </button>
-          </div>
+          <a href="/forget" className={style.forget}>
+            Forgot Password
+          </a>
+          <a href="/register" className={style.register}>
+            Register
+          </a>
+          <button type="submit" className={style.buttonst}>
+            Login
+          </button>
         </form>
       </div>
     </div>

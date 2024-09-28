@@ -8,6 +8,8 @@ import About from "./About/About.jsx";
 import Activities from "./Activities/Activities.jsx";
 import Contact from "./Contact/Contact.jsx";
 import Login from "./Login/Login.jsx";
+import Register from "./Register/Register.jsx";
+import Forget from "./ForgetPassword/ForgetPassword.jsx";
 import Footer from "./Footer/Footer.jsx";
 import { useState } from "react";
 
@@ -31,6 +33,8 @@ function App() {
           <Route path="/activities" element={<Activities />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/forget" element={<Forget />} />
         </Routes>
         <footer>
           <Footer />

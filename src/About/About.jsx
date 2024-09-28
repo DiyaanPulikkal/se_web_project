@@ -1,6 +1,10 @@
 import style from "./About.module.css";
 import TextSection from "./TextSection.jsx";
 import { useEffect } from 'react';
+import ima1 from './image1.jpg';
+import ima2 from './image2.jpg';
+import insert1 from './inserted_1.jpg';
+import insert2 from './inserted_2.jpg';
 function About() {
   useEffect(() => {
       window.scrollTo(0, 0); // Scroll to the top of the page when the component loads
@@ -87,17 +91,31 @@ function About() {
 
   return (
     <div className={style.spacebelowInAbout}>
-      {/* <h1 className={style.heading}>About</h1> */}
-      {contentArr.map((content, i) => {
-        return (
-          <TextSection
-            key={i}
-            index={i + 1}
-            content={content}
-            heading={headingArr[i]}
-          />
-        );
-      })}
+      <h1 className='pageHeading'>About Us</h1>
+      <div>
+        {contentArr.map((content, i) => {
+          return (
+            <TextSection
+              key={i}
+              index={i + 1}
+              content={content}
+              heading={headingArr[i]}
+            />
+          );
+        })}
+
+        <div className={style.divlayer}> 
+
+            <img src={ima1} alt="KMITL" className={style.imlayer1} />
+            <img src={insert1} alt="KMITL" className={style.iminsertpic1} />
+
+
+            <img src={ima2} alt="KMITL" className={style.imlayer2} />
+            <img src={insert2} alt="KMITL" className={style.iminsertpic2} />
+
+        </div>
+      </div>
+      
     </div>
   );
 }

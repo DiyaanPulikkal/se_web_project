@@ -12,8 +12,8 @@ function Footer() {
         <div className={style.footerLeft}>
           <h3>Address</h3>
           <p>
-            King Mongkut Institute of Technology <br />
-            Ladkrabang 1, Chalongkrung 1 Alley, <br />
+            King Mongkut Institute of Technology <br /><br />
+            Ladkrabang 1, Chalongkrung 1 Alley, <br /><br />
             Lat Krabang, Bangkok 10520, Thailand
           </p>
           <br />

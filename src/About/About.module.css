@@ -33,12 +33,14 @@
   padding-bottom: 2vw;
   padding-left: 0vw;
   padding-right: 11vw;
-  margin-top: 5vh;
+  margin-top: 80vh;
   margin-bottom: 10vh;
   margin-right: 15vw;
   display: flex;
   /* box-shadow: 2rem 2rem #687b97; */
   box-shadow: 1rem 1rem 5rem #a6a8a7;
+  position: relative;
+  z-index: 2;
 }
 
 .backgroundAreaEachbox24 {
@@ -48,12 +50,14 @@
   padding-bottom: 2vw;
   padding-left: 9vw;
   padding-right: 0vw;
-  margin-top: 5vh;
-  margin-bottom: 10vh;
-  margin-left: 15vw;
+  margin-top: 80vh;
+  margin-bottom: 50vh;
+  margin-left: 5vw;
   display: flex;
   /* box-shadow: 2rem 2rem #4c897c; */
   box-shadow: -1rem 1rem 5rem #a6a8a7;
+  position: relative;
+  z-index: 2;
 }
 
 .backgroundAreaEachbox1and3 h1 {
@@ -82,4 +86,65 @@
   margin-left: 3vw;
   text-shadow: #999595 -0.5rem 0.5rem 0.75rem;
 
+}
+
+
+
+
+
+
+
+
+
+/* image  */
+
+.divlayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  margin-top: 20vh;
+}
+
+.imlayer1 {
+  padding-top: 30vh;
+  padding-left: 25vw;
+  width: auto;
+  height: 100vh;
+  object-fit: cover;
+  margin: 0;
+  filter: brightness(0.9);
+  filter: drop-shadow(0.5rem 0.5rem 0.75rem #999595);
+}
+.imlayer2 {
+  padding-top: 125vh;
+  padding-left: 25vw;
+  width: auto;
+  height: 100vh;
+  object-fit: cover;
+  margin: 0;
+  filter: brightness(0.9);
+  filter: drop-shadow(0.5rem 0.5rem 0.75rem #999595);
+}
+
+.iminsertpic1{
+  padding-top: 25vh;
+  width: 100vw;
+  height: 45vh;
+  object-fit: cover;
+  margin-top: 15vh;
+  filter: brightness(0.75);
+  object-position: 0% 40%; /* Ensures the bottom part is focused */
+}
+
+.iminsertpic2{
+  padding-top: 45vh;
+  width: 100vw;
+  height: 45vh;
+  object-fit: cover;
+  margin-top: 15vh;
+  filter: brightness(0.75);
+  object-position: 0% 80%; /* Ensures the bottom part is focused */
 }
