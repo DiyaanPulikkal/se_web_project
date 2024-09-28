@@ -16,8 +16,8 @@
 .textExplainArea p {
   line-height: 1.6; /* Increase line height for better spacing between lines */
   text-align: justify; /* Align the text in a justified manner */
-  margin: 20px 0; /* Add space around the paragraph */
-  padding: 0 10px; /* Add padding inside the paragraph */
+  margin: 3vh 0; /* Add space around the paragraph */
+  padding: 0 2vw; /* Add padding inside the paragraph */
   color: #333; /* Set a clean, dark text color */
 }
 
