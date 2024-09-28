@@ -29,6 +29,9 @@ const rounds = [
 function Timeline() {
     const [currentDate, setCurrentDate] = useState(new Date(2025, 1, 1));
 
+    const currentRound = rounds[0];
+    const pinPosition = findPinPosition(currentDate, currentRound);
+
     useEffect(() => {
         const intervalId = setInterval(() => {
             setCurrentDate(new Date());
@@ -48,7 +51,7 @@ function Timeline() {
     return (
         <div className={style.timelineDiv}>
             <img src={timelineImage} className={style.timelineImage} alt="Admission Timeline" />
-            <img src={pin} className={style.pin} alt="Pin" />
+            <img src={pin} className={style.pin} alt="Pin" style={{ position: "absolute", left: `${pinPosition.left}%`, top: `${pinPosition.top}%`, zIndex: 2 }} />
             {
                 roundsLocked.map((isLocked, index) => {
                     const icon = isLocked ? lockedIcon : unlockedIcon;
@@ -65,6 +68,12 @@ function Timeline() {
             }
         </div>
     );
+}
+
+function findPinPosition(currentDate, currentRound) {
+    const left = 4.0 + (currentRound.id - 1) * 29.35;
+    const top = 39;
+    return { left: left, top: top };
 }
 
 export default Timeline;
