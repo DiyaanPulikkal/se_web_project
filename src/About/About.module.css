@@ -100,6 +100,9 @@
 
 .divlayer {
   position: absolute;
+  flex-direction: column; /* Aligns items vertically */
+  justify-content: center; /* Centers vertically */
+  align-items: center; /* Centers horizontally */
   top: 0;
   left: 0;
   width: 100vw;
@@ -147,4 +150,20 @@
   margin-top: 15vh;
   filter: brightness(0.75);
   object-position: 0% 80%; /* Ensures the bottom part is focused */
+}
+
+@media (max-width: 768px) {
+  .divlayer {
+    flex-direction: column; /* Stack content vertically for smaller screens */
+  }
+
+  .backgroundAreaEachbox1and3, .backgroundAreaEachbox24 {
+    padding: 5vw; /* Increase padding for smaller screens */
+  }
+
+  .imlayer1, .imlayer2 {
+    padding-left: 0; /* Remove excessive padding on smaller screens */
+    width: 100vw;
+    height: auto; /* Maintain aspect ratio */
+  }
 }
