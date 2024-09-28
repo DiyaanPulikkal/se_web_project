@@ -16,8 +16,8 @@
 .textExplainArea p {
   line-height: 1.6; /* Increase line height for better spacing between lines */
   text-align: justify; /* Align the text in a justified manner */
-  margin: 20px 0; /* Add space around the paragraph */
-  padding: 0 10px; /* Add padding inside the paragraph */
+  margin: 3vh 0; /* Add space around the paragraph */
+  padding: 0 2vw; /* Add padding inside the paragraph */
   color: #333; /* Set a clean, dark text color */
 }
 
@@ -152,18 +152,3 @@
   object-position: 0% 80%; /* Ensures the bottom part is focused */
 }
 
-@media (max-width: 768px) {
-  .divlayer {
-    flex-direction: column; /* Stack content vertically for smaller screens */
-  }
-
-  .backgroundAreaEachbox1and3, .backgroundAreaEachbox24 {
-    padding: 5vw; /* Increase padding for smaller screens */
-  }
-
-  .imlayer1, .imlayer2 {
-    padding-left: 0; /* Remove excessive padding on smaller screens */
-    width: 100vw;
-    height: auto; /* Maintain aspect ratio */
-  }
-}
