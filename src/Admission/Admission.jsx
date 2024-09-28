@@ -1,9 +1,15 @@
-import "./Admission.module.css";
+import style from "./Admission.module.css";
+import info from "./assets/info.png";
+import Timeline from "./Timeline.jsx";
 function Admission(props) {
   return (
     <>
       <h1 className="pageHeading">Admission</h1>
-      {props.isLoggedIn.value ? <p>Logged in</p> : <p>Not logged in</p>}
+      <h2 className={style.sectionHeading}> <img src={info} />Admission Timeline (2025, Real-time)</h2>
+      <div className={style.timelineDiv}>
+        <Timeline />
+
+      </div>
     </>
   );
 }
