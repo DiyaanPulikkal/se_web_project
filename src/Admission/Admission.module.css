@@ -1,0 +1,11 @@
+.sectionHeading {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 10vw;
+}
+
+.sectionHeading img {
+    width: 4vh;
+    height: 4vh;
+    margin-right: 10px;
+    vertical-align: middle;
+}
