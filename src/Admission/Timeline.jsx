@@ -71,7 +71,7 @@ function Timeline() {
 }
 
 function findPinPosition(currentDate, currentRound) {
-    const left = 4.0 + (currentRound.id - 1) * 29.35;
+    const left = (4.0 + (currentRound.id - 1) * 29.35);
     const top = 39;
     return { left: left, top: top };
 }

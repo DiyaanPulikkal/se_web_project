@@ -88,14 +88,6 @@
 
 }
 
-
-
-
-
-
-
-
-
 /* image  */
 
 .divlayer {
@@ -158,7 +150,7 @@
   }
 
   .backgroundAreaEachbox1and3, .backgroundAreaEachbox24 {
-    padding: 5vw; /* Increase padding for smaller screens */
+    flex-direction: column; /* Increase padding for smaller screens */
   }
 
   .imlayer1, .imlayer2 {
