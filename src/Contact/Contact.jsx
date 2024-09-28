@@ -5,10 +5,14 @@ import "leaflet/dist/leaflet.css";
 import phonecon from "./phone-calli.png";
 import emailcon from "./emaili.png";
 import facebook from "./facebookicon.png";
+import { useEffect } from 'react';
 
 const position = [13.7265341, 100.7748818];
 
 function Contact() {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page when the component loads
+  }, []);
   const [copiedIndex, setCopiedIndex] = useState(null);
 
   const copyToClipboard = (text, index) => {
