@@ -27,10 +27,10 @@ const rounds = [
 ];
 
 function Timeline() {
-    const [currentDate, setCurrentDate] = useState(new Date(2025, 1, 1));
+    const [currentDate, setCurrentDate] = useState(new Date(2024, 6, 27));
 
     const currentRound = rounds[0];
-    const pinPosition = findPinPosition(currentDate, currentRound);
+    const pinPosition = { left: 0, top: 0 };
 
     useEffect(() => {
         const intervalId = setInterval(() => {
@@ -43,7 +43,10 @@ function Timeline() {
     const [roundsLocked, setRoundsLocked] = useState([true, true, true]);
 
     useEffect(() => {
-        const updatedRoundsLocked = rounds.map(round => currentDate < new Date(round.startDate));
+        const updatedRoundsLocked = rounds.map(round => {
+            console.log(currentDate.toDateString(), new Date(round.startDate).toDateString());
+            return currentDate < new Date(round.startDate)
+        });
         setRoundsLocked(updatedRoundsLocked);
     }, [currentDate, rounds]);
 
@@ -51,7 +54,7 @@ function Timeline() {
     return (
         <div className={style.timelineDiv}>
             <img src={timelineImage} className={style.timelineImage} alt="Admission Timeline" />
-            <img src={pin} className={style.pin} alt="Pin" style={{ position: "absolute", left: `${pinPosition.left}%`, top: `${pinPosition.top}%`, zIndex: 2 }} />
+            {/* <img src={pin} className={style.pin} alt="Pin" style={{ position: "absolute", left: `${pinPosition.left}%`, top: `${pinPosition.top}%`, zIndex: 2 }} /> */}
             {
                 roundsLocked.map((isLocked, index) => {
                     const icon = isLocked ? lockedIcon : unlockedIcon;
@@ -61,7 +64,7 @@ function Timeline() {
                             src={icon}
                             className={style.lockedIcon}
                             alt={isLocked ? "Locked" : "Unlocked"}
-                            style={{ position: "absolute", top: "46.5%", left: `${index * 29.35 + 5.4}%`, width: "4%", height: "7%", transform: "translate(-50%, -50%)" }}
+                            style={{ position: "absolute", top: "48.5%", left: `${index * 31.8 + 2.5}%`, width: "4%", height: "15%", transform: "translate(-50%, -50%)" }}
                         />
                     );
                 })
@@ -69,11 +72,4 @@ function Timeline() {
         </div>
     );
 }
-
-function findPinPosition(currentDate, currentRound) {
-    const left = (4.0 + (currentRound.id - 1) * 29.35);
-    const top = 39;
-    return { left: left, top: top };
-}
-
 export default Timeline;
