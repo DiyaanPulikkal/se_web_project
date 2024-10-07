@@ -1,4 +1,4 @@
-import aboutim from './aboutSlide.jpg';
+import aboutim from './assets/aboutSlide.jpg';
 import style from './aboutInSlide.module.css';
 import {Link} from 'react-router-dom';
 

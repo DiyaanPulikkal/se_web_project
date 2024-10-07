@@ -1,12 +1,12 @@
 import style from "./Program.module.css";
-import glasgow_img from "./Glasgow_image.jpg";
-import glasgow_stu from "./glasgow_student.jpeg";
-import queenland_college from "./queensland_campus.jpg";
-import queensland_stu from "./queensland_student.jpg";
-import kmitl_img from "./kmitl_college.jpg";
-import kmitl_insert from "./kmitl_image_insertToweb.jpg";
-import se_software_insert from "./gimmic_se.jpg";
-import se_software_insert2 from "./software_insert.jpg";
+import glasgow_img from "./assets/Glasgow_image.jpg";
+import glasgow_stu from "./assets/glasgow_student.jpeg";
+import queenland_college from "./assets/queensland_campus.jpg";
+import queensland_stu from "./assets/queensland_student.jpg";
+import kmitl_img from "./assets/kmitl_college.jpg";
+import kmitl_insert from "./assets/kmitl_image_insertToweb.jpg";
+import se_software_insert from "./assets/gimmic_se.jpg";
+import se_software_insert2 from "./assets/software_insert.jpg";
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 

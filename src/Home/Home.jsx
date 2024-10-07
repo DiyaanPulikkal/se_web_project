@@ -6,9 +6,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useState } from "react";
 import style from "./Home.module.css";
 import { Link } from "react-router-dom";
-import Glasgowuniver from './gasglowUni.jpg';
-import KingMongkut from './kmitlUni.jpg';
-import Queenlanduniver from './queenlandUni.jpg';
+import Glasgowuniver from './asset/gasglowUni.jpg';
+import KingMongkut from './asset/kmitlUni.jpg';
+import Queenlanduniver from './asset/queenlandUni.jpg';
 
 // import slide 3 component
 import SlideEvent from './SlideEvent/SlideEvent.jsx'
@@ -18,19 +18,19 @@ import SlideEvent from './SlideEvent/SlideEvent.jsx'
 
 
 // import tuitionfee image
-import tuitionFee from './tuitionFee.png';
+import tuitionFee from './asset/tuitionFee.png';
 
 // import image for insert text skill mapping
-import webIm from './frontEnd.png';
-import mobileIm from './mobileDeveloper.png';
-import cyber from './cyberSecurity.png';
-import ai from './artificialEng.png';
-import CirMap from './graph.png';
+import webIm from './asset/frontEnd.png';
+import mobileIm from './asset/mobileDeveloper.png';
+import cyber from './asset/cyberSecurity.png';
+import ai from './asset/artificialEng.png';
+import CirMap from './asset/graph.png';
 //end
 
 
-import prevArrowImage from './slideToleft.png'; // Path to your previous button image
-import nextArrowImage from './slideToright.png'; // Path to your next button image
+import prevArrowImage from './asset/slideToleft.png'; // Path to your previous button image
+import nextArrowImage from './asset/slideToright.png'; // Path to your next button image
 
 function Home() {
 

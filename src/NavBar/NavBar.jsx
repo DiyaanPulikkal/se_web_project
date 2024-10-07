@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import style from "./NavBar.module.css";
-import logo from "./logo.png";
-import accountIcon from "./account-icon.png";
+import logo from "./assets/logo.png";
+import accountIcon from "./assets/account-icon.png";
 function NavBar() {
   return (
     <nav className={style.mainNav}>

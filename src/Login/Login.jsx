@@ -1,7 +1,14 @@
 import style from "./Login.module.css";
-import ima from "./software.png";
+import ima from "./assets/software.png";
+import { useEffect } from 'react';
+
 
 function Login() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page when the component loads
+  }, []);
+
   return (
     <div className={style.outterdiv}>
       <h1 className={style.head}>Log In</h1>

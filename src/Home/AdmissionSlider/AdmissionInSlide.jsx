@@ -1,5 +1,5 @@
 import style from './AdmissionInSlide.module.css';
-import admissionim from './AdmissionSlide.jpg';
+import admissionim from './assets/AdmissionSlide.jpg';
 import {Link} from 'react-router-dom';
 
 function AdmissionInSlide() {

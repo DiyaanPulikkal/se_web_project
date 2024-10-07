@@ -1,5 +1,5 @@
 import style from "./ForgetPassword.module.css";
-import ima from "./software.png";
+import ima from "./assets/software.png";
 
 
 function ForgetPassword() {

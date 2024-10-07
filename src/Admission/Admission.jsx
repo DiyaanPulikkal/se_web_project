@@ -1,7 +1,14 @@
 import style from "./Admission.module.css";
 import info from "./assets/info.png";
 import Timeline from "./Timeline.jsx";
+import { useEffect } from 'react';
+
 function Admission(props) {
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page when the component loads
+  }, []);
+
   return (
     <>
       <h1 className="pageHeading">Admission</h1>

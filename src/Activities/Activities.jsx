@@ -1,7 +1,14 @@
 import style from "./Activities.module.css";
 import ActSection from "./ActSection.jsx";
+import { useEffect } from 'react';
+
+import pic1 from './assets/picture1.jpg';
+
 
 function Activities() {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page when the component loads
+  }, []);
   const archiveChildren = [
     {
       img: "https://via.placeholder.com/150",
@@ -47,6 +54,7 @@ function Activities() {
   return (
     <>
       <h1 className="pageHeading">Activities</h1>
+      <img src={pic1} alt="Students" className={style.imageProgram} />
       <div className={style.sectionContainer}>
         <ActSection title="Upcoming" content={upcomingChildren}></ActSection>
         <ActSection title="Archive" content={archiveChildren}></ActSection>

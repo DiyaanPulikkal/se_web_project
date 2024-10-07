@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import style from "./Footer.module.css";
-import phoneIcon from "./phone-call.png";
-import emailIcon from "./email.png";
+import phoneIcon from "./assets/phone-call.png";
+import emailIcon from "./assets/email.png";
 function Footer() {
   return (
     <footer className={style.mainFooter}>
@@ -41,7 +41,7 @@ function Footer() {
           </div>
           <div>
             <h3>&nbsp;</h3>
-            <Link to="/activities">Admission</Link>
+            <Link to="/admission">Admission</Link>
             <br />
             <Link to="/login">Login</Link>
             <br />

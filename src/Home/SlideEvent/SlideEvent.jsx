@@ -1,11 +1,11 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import prevArrowImage from './leftArrow.png'; // Path to your previous button image
-import nextArrowImage from './rightArrow.png'; // Path to your next button image
+import prevArrowImage from './assets/leftArrow.png'; // Path to your previous button image
+import nextArrowImage from './assets/rightArrow.png'; // Path to your next button image
 import style from "./SlideEvent.module.css";
-import hackathon from './AIhackathon.jpg';
-import mapping from './map.png';
+import hackathon from './assets/AIhackathon.jpg';
+import mapping from './assets/map.png';
 import { Link } from "react-router-dom";
 
 

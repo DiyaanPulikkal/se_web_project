@@ -1,5 +1,5 @@
 import style from './HeaderInSlide.module.css';
-import AI_slide from './AI_slide.jpg';
+import AI_slide from './assets/AI_slide.jpg';
 
 
 function HeaderInSlide() {

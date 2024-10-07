@@ -1,10 +1,10 @@
 import style from "./About.module.css";
 import TextSection from "./TextSection.jsx";
 import { useEffect } from 'react';
-import ima1 from './image1.jpg';
-import ima2 from './image2.jpg';
-import insert1 from './inserted_1.jpg';
-import insert2 from './inserted_2.jpg';
+import ima1 from './assets/image1.jpg';
+import ima2 from './assets/image2.jpg';
+import insert1 from './assets/inserted_1.jpg';
+import insert2 from './assets/inserted_2.jpg';
 function About() {
   useEffect(() => {
       window.scrollTo(0, 0); // Scroll to the top of the page when the component loads

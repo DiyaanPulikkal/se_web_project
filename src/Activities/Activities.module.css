@@ -1,11 +1,20 @@
 .sectionContainer {
   margin-top: 5%;
   margin-bottom: 1%;
-  box-shadow: 1px 1px 10px 1px #000000;
   max-width: 75vw;
   margin-left: auto;
   margin-right: auto;
   padding-left: 0;
   align-items: left;
   margin-bottom: 10vh;
+}
+
+
+.imageProgram {
+  width: 100vw;
+  height: 50vh;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+  filter: brightness(0.5);
 }

@@ -2,9 +2,9 @@ import { useState } from "react";
 import style from "./Contact.module.css";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import phonecon from "./phone-calli.png";
-import emailcon from "./emaili.png";
-import facebook from "./facebookicon.png";
+import phonecon from "./assets/phone-calli.png";
+import emailcon from "./assets/emaili.png";
+import facebook from "./assets/facebookicon.png";
 import { useEffect } from 'react';
 
 const position = [13.7265341, 100.7748818];

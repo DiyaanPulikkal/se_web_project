@@ -1,5 +1,5 @@
 import style from "./Register.module.css";
-import ima from "./software.png";
+import ima from "./assets/software.png";
 
 function Register() {
   return (
