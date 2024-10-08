@@ -9,7 +9,7 @@ function Activity(props) {
       <div className={style.activityText}>
         <h3>{props.title}</h3>
         <p>{props.description}</p>
-        <a href={props.link} target="_blank" rel="noreferrer">More Info</a>
+        <a href={props.link} target="_blank" rel="noreferrer" style={{textDecoration: "none", color: "#6a9c89"}}>More Info</a>
       </div>
 
     </div>);

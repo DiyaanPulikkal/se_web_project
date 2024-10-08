@@ -17,12 +17,23 @@
 }
 
 .accordionHeader {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding: 1%;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+
+
 .accordionIcon {
-  margin-left: 10px;
+  margin-left: auto;
+  display: inline-block;
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.open {
+  transform: rotate(90deg); /* Rotate the arrow to point down */
 }

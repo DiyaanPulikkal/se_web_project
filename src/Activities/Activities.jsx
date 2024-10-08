@@ -3,6 +3,8 @@ import ActSection from "./ActSection.jsx";
 import { useEffect } from 'react';
 
 import pic1 from './assets/picture1.jpg';
+import pic2 from './assets/aiEvent.jpg';
+import pic3 from './assets/studentpic.jpg';
 
 
 function Activities() {
@@ -11,43 +13,20 @@ function Activities() {
   }, []);
   const archiveChildren = [
     {
-      img: "https://via.placeholder.com/150",
-      title: "Archived Activity 1",
-      description: "Description of archived activity 1",
-      link: "https://www.google.com",
-    },
-    {
-      img: "https://via.placeholder.com/150",
-      title: "Archived Activity 2",
-      description: "Description of archived activity 2",
-      link: "https://www.google.com",
-    },
-    {
-      img: "https://via.placeholder.com/150",
-      title: "Archived Activity 3",
-      description: "Description of archived activity 3",
-      link: "https://www.google.com",
+      img: pic2,
+      title: "2024 International AI Hackathon",
+      description: "Create an innovative software prototype that addresses our present environmental and societal issues, targeting one or more in the link below.",
+      link: "https://se.kmitl.ac.th/aihackathon/about",
+      button: "have",
     },
   ];
 
   const upcomingChildren = [
     {
-      img: "https://via.placeholder.com/150",
-      title: "Upcoming Activity 1",
-      description: "Description of upcoming activity 1",
-      link: "https://www.google.com",
-    },
-    {
-      img: "https://via.placeholder.com/150",
-      title: "Upcoming Activity 2",
-      description: "Description of upcoming activity 2",
-      link: "https://www.google.com",
-    },
-    {
-      img: "https://via.placeholder.com/150",
-      title: "Upcoming Activity 3",
-      description: "Description of upcoming activity 3",
-      link: "https://www.google.com",
+      img: pic3,
+      title: "Final Exam", 
+      description: "A comprehensive and often cumulative assessment that evaluates a student's understanding of the entire course material at the end of an academic term or semester",
+      link: "https://www.reg.kmitl.ac.th/educalendar/2567/th-2.pdf",
     },
   ];
 

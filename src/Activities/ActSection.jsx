@@ -14,7 +14,9 @@ function ActSection(props) {
     <div className={style.mainDiv}>
       <h2 onClick={toggleAccordion} className={style.accordionHeader}>
         {props.title}
-        <span className={style.accordionIcon}>{isOpen ? "↓" : "→"}</span>
+        <span className={`${style.accordionIcon} ${isOpen ? style.open : ""}`}>
+          →
+        </span>
       </h2>
 
       <div

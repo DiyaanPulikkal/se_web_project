@@ -2,13 +2,36 @@
   display: flex;
   border-radius: 2rem;
   margin: 2vh 10vw 2vh 10vw;
-  background-color: antiquewhite;
+  background-color: #eeeeee;
+  /* antiquewhite */
+  /* eeeeee */
+  /* whitesmoke */
   padding-bottom: 0;
   
 }
 
 .activityContainer .activityImage img{
-  border-radius: 2rem 0 0 2rem;
-  margin-right: 5vw;
-  margin:0 5vw 0 0;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  margin:2vh 2vw 2vh 2vw;
+  
+}
+
+.activityText {
+  padding: 2vh 2vw 2vh 2vw;
+  width: 80%;
+}
+.activityText h3 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+}
+
+.activityText p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #58575c;
 }
