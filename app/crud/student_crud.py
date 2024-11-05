@@ -2,9 +2,10 @@ from sqlalchemy.orm import Session
 from models.student_model import Student
 from schemas.student import StudentCreate
 import json
+from typing import List
 
-def create_student(db: Session, student: StudentCreate) -> Student:
-    if (db.query(Student).filter(Student.id == student.id).first() is not None):
+def create_student(db: Session, student: StudentCreate) -> (Student | None):
+    if db.query(Student).filter(Student.id == student.id).first() != None:
         return None
 
     db_student = Student(
@@ -21,22 +22,21 @@ def create_student(db: Session, student: StudentCreate) -> Student:
     db.refresh(db_student)
     return db_student
 
-def get_student(db: Session, student_id: int) -> Student:
+def get_student_by_id(db: Session, student_id: int) -> (Student | None):
     return db.query(Student).filter(Student.id == student_id).first()
 
-def get_students(db: Session, skip: int = 0, limit: int = 100):
-    return db.query(Student).offset(skip).limit(limit).all()
+def get_all_students(db: Session) -> (List[Student] | None):
+    return db.query(Student).all()
 
-def delete_student(db: Session, student_id: int) -> Student:
+def delete_student(db: Session, student_id: int) -> (Student | None):
     db_student = db.query(Student).filter(Student.id == student_id).first()
-    if db_student is None:
+    if db_student == None:
         return None
-
     db.delete(db_student)
     db.commit()
     return db_student
 
-def get_student_by_name(db: Session, student_name: str) -> Student:
+def get_student_by_name(db: Session, student_name: str) -> (Student | None):
     return db.query(Student).filter(Student.name == student_name).first()
 
 def new_year(db: Session) -> Student:

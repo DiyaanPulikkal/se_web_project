@@ -17,7 +17,7 @@ async def create_student(student: StudentCreate, db: Session = Depends(get_db)):
 
 @router.get("/student/{student_id}")
 async def get_student(student_id: int, db: Session = Depends(get_db)):
-    db_student = student_crud.get_student(db, student_id)
+    db_student = student_crud.get_student_by_id(db, student_id)
     if db_student is None:
         raise HTTPException(status_code=404, detail="Student not found")
     return {"student_id": db_student.id, "student_name": db_student.name}
@@ -26,7 +26,7 @@ async def get_student(student_id: int, db: Session = Depends(get_db)):
 @router.delete("/students/delete/{student_id}")
 async def delete_student(student_id: int, db: Session = Depends(get_db)):
     student = student_crud.delete_student(db, student_id)
-    if student is None:
+    if student == None:
         raise HTTPException(status_code=404, detail="Student not found")
     return student
 

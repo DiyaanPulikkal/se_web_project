@@ -9,24 +9,23 @@ router = APIRouter()
 
 @router.get("/activities/{activity_index}")
 async def get_activity(activity_index: int, db=Depends(get_db)):
-    activity = activity_crud.get_activity(db, activity_index)
-    if activity is None:
+    activity = activity_crud.get_activity_by_index(db, activity_index)
+    if activity == None:
         raise HTTPException(status_code=404, detail="Activity not found")
     return activity
 
 
 @router.get("/activities")
 async def get_activities(skip: int = 0, limit: int = 100, db=Depends(get_db)):
-    return activity_crud.get_activities(db, skip, limit)
+    return activity_crud.get_all_activities(db)
 
 
 @router.put("/activity/add_participant/{activity_index}/")
 async def add_participant_to_activity(activity_index: int, participants_id: List[int] = Query(default=None), db=Depends(get_db)):
-    if participants_id is None or len(participants_id) == 0:
-        raise HTTPException(
-            status_code=400, detail="No participants_id provided")
+    if participants_id == None or len(participants_id) == 0:
+        raise HTTPException(status_code=400, detail="No participants_id provided")
     result = add_participant_to_activity(db, activity_index, participants_id)
-    if result is None:
+    if result == None:
         raise HTTPException(status_code=404, detail="Activit")
 
 
@@ -38,6 +37,6 @@ async def create_activity(activity: ActivityCreate, db=Depends(get_db)):
 @router.delete("/activity/delete_activity/{activity_index}")
 async def delete_activity(activity_index: int, db=Depends(get_db)):
     activity = activity_crud.delete_activity(db, activity_index)
-    if activity is None:
+    if activity == None:
         raise HTTPException(status_code=404, detail="Activity not found")
     return activity
