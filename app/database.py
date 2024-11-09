@@ -1,5 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from models.activity_model import Activity
+from models.student_model import Student
 from models.base import Base
 
 DATABASE_URL = "sqlite:///./database/database.db"

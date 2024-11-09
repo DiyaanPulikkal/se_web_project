@@ -1,6 +1,6 @@
 import style from "./Activities.module.css";
 import ActSection from "./ActSection.jsx";
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import pic1 from './assets/picture1.jpg';
 import pic2 from './assets/aiEvent.jpg';
@@ -29,6 +29,39 @@ function Activities() {
       link: "https://www.reg.kmitl.ac.th/educalendar/2567/th-2.pdf",
     },
   ];
+
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    // Fetch data from the FastAPI server
+    fetch("http://localhost:8000/activities")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setData(data);
+      })
+      .catch((error) => {
+        console.error("There was a problem with the fetch operation:", error);
+      });
+  }, []);
+
+  if (data) {
+    console.log(data);
+  }
+
+  const upcomingChildren1 = [
+    {
+      img: "http://localhost:8000/static/" + data[0].image,
+      title: data[0].name, 
+      description: data[0].description,
+      link: "https://www.reg.kmitl.ac.th/educalendar/2567/th-2.pdf",
+    },
+  ];
+
 
   return (
     <>
