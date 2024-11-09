@@ -8,6 +8,7 @@ class Activity(Base):
     index = Column(Integer, primary_key=True)
     name = Column(String)
     description = Column(String)
+    image = Column(String)
     startRegistration = Column(String)
     endRegistration = Column(String)
     participants = Column(TEXT)

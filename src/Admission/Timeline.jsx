@@ -27,7 +27,7 @@ const rounds = [
 ];
 
 function Timeline() {
-    const [currentDate, setCurrentDate] = useState(new Date(2024, 6, 27));
+    const [currentDate, setCurrentDate] = useState(new Date(2024, 1, 27));
 
     const currentRound = rounds[0];
     const pinPosition = { left: 0, top: 0 };
@@ -64,7 +64,7 @@ function Timeline() {
                             src={icon}
                             className={style.lockedIcon}
                             alt={isLocked ? "Locked" : "Unlocked"}
-                            style={{ position: "absolute", top: "48.5%", left: `${index * 31.8 + 2.5}%`, width: "4%", height: "15%", transform: "translate(-50%, -50%)" }}
+                            style={{ position: "absolute", top: "48.5%", left: `${(index + 1) * 31.8 + 2.5}%`, width: "4%", height: "15%", transform: "translate(-50%, -50%)" }}
                         />
                     );
                 })
