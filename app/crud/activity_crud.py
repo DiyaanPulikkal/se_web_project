@@ -3,7 +3,9 @@ from models.activity_model import Activity
 from schemas.activity import ActivityCreate
 from typing import List
 import json
+import datetime
 
+# CREATE ---------------------------------------------------------------------
 
 def create_activity(db: Session, activity: ActivityCreate) -> Activity:
     activity_list = db.query(Activity).all()
@@ -26,28 +28,24 @@ def create_activity(db: Session, activity: ActivityCreate) -> Activity:
     return db_activity
 
 
+# READ -----------------------------------------------------------------------
+
 def get_all_activities(db: Session):
     return db.query(Activity).all()
-
-
-def delete_activity_by_index(db: Session, activity_index: int) -> (Activity | None):
-    db_activity = db.query(Activity).filter(Activity.index == activity_index).first()
-    if db_activity is None:
-        return None
-
-    db.delete(db_activity)
-    db.commit()
-    return db_activity
-
 
 def get_activity_by_index(db: Session, activity_index: int) -> (Activity | None):
     return db.query(Activity).filter(Activity.index == activity_index).first()
 
-
 def get_activity_by_name(db: Session, activity_name: str) -> (Activity | None):
     return db.query(Activity).filter(Activity.name == activity_name).first()
 
+def get_upcoming_activities(db: Session):
+    return db.query(Activity).filter(datetime.datetime.strptime(Activity.endRegistration, "%Y-%m-%d").date() > datetime.datetime.now().date()).all()
 
+def get_archived_activities(db: Session):
+    return db.query(Activity).filter(datetime.datetime.strptime(Activity.endRegistration, "%Y-%m-%d").date() <= datetime.datetime.now().date()).all()
+
+# UPDATE ---------------------------------------------------------------------
 def add_participant_to_activity(db: Session, activity_index: int, participants_id: List[int], group_name: str = None) -> (Activity | None):
     db_activity = db.query(Activity).filter(Activity.index == activity_index).first()
 
@@ -74,4 +72,15 @@ def add_participant_to_activity(db: Session, activity_index: int, participants_i
     db_activity.participants = json.dumps(toAdd)
     db.commit()
     db.refresh(db_activity)
+    return db_activity
+
+# DELETE ---------------------------------------------------------------------
+
+def delete_activity_by_index(db: Session, activity_index: int) -> (Activity | None):
+    db_activity = db.query(Activity).filter(Activity.index == activity_index).first()
+    if db_activity is None:
+        return None
+
+    db.delete(db_activity)
+    db.commit()
     return db_activity

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Activity</title>
+</head>
+<body>
+    <h1>Create Activity</h1>
+    <form action="/activity/create/submit" method="post">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required>
+        <br>
+        <label for="description">Description</label>
+        <input type="text" name="description" id="description" required>
+        <br>
+        <label for="startRegistration">Start Registration</label>
+        <input type="date" name="startRegistration" id="startRegistration" required>
+        <br>
+        <label for="endRegistration">End Date</label>
+        <input type="date" name="endRegistration" id="endRegistration" required>
+        <br>
+        <label for="maxParticipants">Max Participants</label>
+        <input type="number" name="maxParticipants" id="maxParticipants" required>
+        <br>
+        <label for="isGroup">Is Group</label>
+        <input type="checkbox" name="isGroup" id="isGroup">
+        <br>
+        <label for="image">Image</label>
+        <input type="text" name="image" id="image" required>
+        <br>
+        <input type="submit" value="Create">
+    </form>
+</html>

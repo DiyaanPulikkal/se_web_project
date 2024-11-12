@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Student</title>
+</head>
+<body>
+    <h1>Create Student</h1>
+    <form action="/student/create/submit" method="post">
+        <label for="id">ID:</label>
+        <input type="number" id="id" name="id" required>
+        <br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="isMale">Gender (check the box if male):</label>
+        <input type="checkbox" id="isMale "name="isMale">
+        <br>
+        <label for="year">Year of Study:</label>
+        <input type="number" id="year" name="year" required>
+        <br>
+        <label for=password>Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
