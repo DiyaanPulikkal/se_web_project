@@ -31,7 +31,7 @@ function ActSection(props) {
         {props.content.map((child, index) => (
           <div key={index}>
             <Activity
-              image={child.img}
+              image={child.image}
               title={child.title}
               description={child.description}
               link={child.link}

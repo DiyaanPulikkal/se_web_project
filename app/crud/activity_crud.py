@@ -40,10 +40,10 @@ def get_activity_by_name(db: Session, activity_name: str) -> (Activity | None):
     return db.query(Activity).filter(Activity.name == activity_name).first()
 
 def get_upcoming_activities(db: Session):
-    return db.query(Activity).filter(datetime.datetime.strptime(Activity.endRegistration, "%Y-%m-%d").date() > datetime.datetime.now().date()).all()
+    return db.query(Activity).filter(Activity.endRegistration > datetime.datetime.now().date()).all()
 
 def get_archived_activities(db: Session):
-    return db.query(Activity).filter(datetime.datetime.strptime(Activity.endRegistration, "%Y-%m-%d").date() <= datetime.datetime.now().date()).all()
+    return db.query(Activity).filter(Activity.endRegistration <= datetime.datetime.now().date()).all()
 
 # UPDATE ---------------------------------------------------------------------
 def add_participant_to_activity(db: Session, activity_index: int, participants_id: List[int], group_name: str = None) -> (Activity | None):
