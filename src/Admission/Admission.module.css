@@ -9,3 +9,118 @@
     margin-right: 10px;
     vertical-align: middle;
 }
+
+.mainDiv {
+    padding: 1%;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-bottom: 1px dashed #000000;
+    width: 73.5vw;
+}
+
+.accordionHeader {
+font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+padding: 1%;
+cursor: pointer;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.accordionIcon {
+    margin-left: auto;
+    display: inline-block;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.open {
+    transform: rotate(90deg); /* Rotate the arrow to point down */
+}
+
+.mainmainDiv {
+    justify-items: center;
+    display: grid;
+    margin-bottom: 50%;
+}
+
+.accordionContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.activityContainer {
+    background-color: whitesmoke;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif; 
+    padding-top: 3vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-bottom: 3vh;
+}
+
+.accordionContent ul li {
+    list-style-type: "- ";
+    padding: 0;
+    line-height: 1.5rem;
+    color: #7f7e82;
+}
+
+.accordionContent ol li {
+    line-height: 1.5rem;
+    color: #7f7e82;
+
+}
+
+.accordionContent p {
+    line-height: 1.5rem;
+    color: #7f7e82;
+    
+}
+
+.requirement {
+    margin-left: 5vw;
+    margin-bottom: 3vw;
+}
+
+.requirement p {
+    line-height: 1.5rem;
+}
+
+.applicationFilling{
+    margin-bottom: 10vh;
+}
+
+.Interview {
+    margin-bottom: 10vh;
+}
+
+.minimumstudent {
+    margin-bottom: 10vh;
+}
+
+.redRemark {
+    color: #FF7D29;
+
+    font-weight: bold;
+}
+
+
+.accordionContent a {
+    text-decoration: none;
+    color: #FF7D29;
+}
+
+.Section2_1 {
+    margin-left: 2vw;
+}
+.Section2_1 h3 {
+    margin-top: 5vh;
+    color: #57575b;
+}
+
+.Section2_1Main {
+    margin-top: 7vh;
+    color: #404043;
+}

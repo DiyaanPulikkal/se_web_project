@@ -1,20 +1,25 @@
 .timelineDiv {
-    position: relative;
-    max-width: 70vw;
-    margin-left: 15vw;
-    /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); */
+  position: relative;
+  max-width: 70vw;
+  margin-left: 15vw;
+  /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); */
 }
 
-.timelineDiv .timelineImage{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.timelineDiv .timelineImage {
+  width: 70% ;
+  height: 70%;
+  object-fit: cover;
+  display: grid;
+  margin: 0 auto;
 }
 
-.timelineDiv .pin{
-    position: absolute;
-    top: 0;
-    left: 10%;
-    width: 4vh;
-    height: 6vh;
+.timelineDiv .pin {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 15vh;
+  height: 16vh;
 }
+
+
+
