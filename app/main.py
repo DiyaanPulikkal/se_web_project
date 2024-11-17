@@ -6,12 +6,13 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
+# Configure CORS settings
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["http://localhost:5173"],  # Replace with your frontend's URL
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["*"],  # Allow all HTTP methods (GET, POST, PUT, DELETE, etc.)
+    allow_headers=["*"],  # Allow all headers
 )
 
 app.mount("/static", StaticFiles(directory="static"), name="static")

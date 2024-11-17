@@ -2,7 +2,12 @@ import { Link } from "react-router-dom";
 import style from "./NavBar.module.css";
 import logo from "./assets/logo.png";
 import accountIcon from "./assets/account-icon.png";
-function NavBar({setIsLoggedIn}, {isLoggedIn}) {
+function NavBar({setIsLoggedIn, isLoggedIn, setCurrentStudentId}) {
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    setCurrentStudentId(null);
+  }
   return (
     <nav className={style.mainNav}>
       <h2>
@@ -44,12 +49,13 @@ function NavBar({setIsLoggedIn}, {isLoggedIn}) {
           <li>
             {!isLoggedIn ? (<Link className={style.login_link} to="/login">
               <img src={accountIcon} className={style.account_icon}></img>Login
-            </Link>) : <button className={style.login_link} onClick={() => setIsLoggedIn(false)}>Logout</button>}
+            </Link>) : <button className={style.login_link} onClick={() => handleLogout()}>Logout</button>}
           </li>
         </ul>
       </div>
     </nav>
   );
 }
+
 
 export default NavBar;

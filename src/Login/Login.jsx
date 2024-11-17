@@ -1,41 +1,48 @@
 import style from "./Login.module.css";
 import ima from "./assets/software.png";
 import { useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 
-function SubmitCredential(setIsLoggedIn) {
-  const student_id= document.getElementById("student_id").value;
-  const password = document.getElementById("password").value;
-  const data = {student_id: student_id, password: password};
+function Login({setIsLoggedIn, setCurrentStudentId}) {
 
-  fetch('http://localhost:8000/student/login', {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  })
-  .then(response => response.json())
-  .then(data => {
-    if (data.status === 200) {
-      window.location.href = "/dashboard";
-      setIsLoggedIn(true);
-    } else {
-      alert("Invalid Credentials");
-    }
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
-}
-
-
-
-
-function Login({setIsLoggedIn}) {
-
+  const navigate = useNavigate();
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll to the top of the page when the component loads
   }, []);
+
+  const handleLogin = (event) => {
+    event.preventDefault();
+
+    const student_id= document.getElementById("student_id").value;
+    const password = document.getElementById("password").value;
+    const data = {student_id: String(student_id), password: String(password)};
+  
+    fetch("http://localhost:8000/student/login/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        if (data.status === 200) {
+          setIsLoggedIn(true);
+          setCurrentStudentId(data.student_id);
+          navigate("/");
+        } else {
+          alert("Invalid Credentials");
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }
 
   return (
     <div className={style.outterdiv}>
@@ -69,10 +76,7 @@ function Login({setIsLoggedIn}) {
           <a href="/forget" className={style.forget}>
             Forgot Password
           </a>
-          <a href="/register" className={style.register}>
-            Register
-          </a>
-          <button type="submit" className={style.buttonst} onClick={()=>SubmitCredential(setIsLoggedIn)}>
+          <button className={style.buttonst} onClick={handleLogin}>
             Login
           </button>
         </form>

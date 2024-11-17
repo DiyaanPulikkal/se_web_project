@@ -15,12 +15,13 @@ import { useState } from "react";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [currentStudentId, setCurrentStudentId] = useState(null);
 
   return (
     <>
       <Router>
         <header>
-          <NavBar setIsLoggedIn={setIsLoggedIn}/>
+          <NavBar setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} setCurrentStudentId={setCurrentStudentId}/>
         </header>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -32,7 +33,7 @@ function App() {
           />
           <Route path="/activities" element={<Activities />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn}/>} />
+          <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} setCurrentStudentId={setCurrentStudentId}/>} />
           <Route path="/forget" element={<Forget />} />
         </Routes>
         <footer>

@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException, Depends, Form, Body
+from fastapi import APIRouter, HTTPException, Depends, Form, Body, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
@@ -9,7 +9,7 @@ from database import get_db
 
 router = APIRouter()
 
-tenplate = Jinja2Templates(directory="templates")
+template = Jinja2Templates(directory="templates")
 
 # GET -------------------------------------------------------------------
 @router.get("/student/get/{student_id}")
@@ -27,12 +27,10 @@ async def get_student_by_name(student_name: str, db: Session = Depends(get_db)):
     return student
 
 @router.get("/student/create/form", response_class=HTMLResponse)
-async def student_form(request):
-    return tenplate.TemplateResponse("create_student.html", {"request": request})
+async def student_form(request: Request):
+    return template.TemplateResponse("create_student.html", {"request": request})
 
-@router.get("/student/login/", response_class=HTMLResponse)
-async def student_login(student_id: int = Body(...), password: str = Body(...), db: Session = Depends(get_db)):
-    return student_crud.login_student(db, student_id, password)
+
 
 # POST -------------------------------------------------------------------
 
@@ -50,6 +48,13 @@ async def create_student(student: StudentCreate, db: Session = Depends(get_db)):
     if db_student is None:
         raise HTTPException(status_code=400, detail="Student already exists")
     return {"student_id": db_student.id, "student_name": db_student.name}
+
+@router.post("/student/login/")
+async def student_login(student_id: int = Body(...), password: str = Body(...), db: Session = Depends(get_db)):
+    student = student_crud.login_student(db, student_id, password)
+    if student is None:
+        return {"status": 404}
+    return {"status": 200, "student_id": student.id}
 
 
 # PUT -------------------------------------------------------------------
