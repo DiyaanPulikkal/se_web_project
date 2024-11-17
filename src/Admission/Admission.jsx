@@ -3,6 +3,7 @@ import info from "./assets/info.png";
 import Timeline from "./Timeline.jsx";
 import { useEffect } from 'react';
 import { useState ,useRef} from "react";
+import Email from "./Email.jsx";
 
 
 function Admission(props) {
@@ -376,6 +377,31 @@ function Admission(props) {
             </div>
         </div>
       </div>
+      </div>
+
+
+      <div className={style.EmailSection}>
+        <p>Get more notification:</p> 
+        <form className={style.InForm} 
+            onSubmit={(e) => {
+            e.preventDefault(); // Prevent form submission
+            const emailInput = document.getElementById("email").value; // Get email value
+            if (!emailInput.includes("@")) {
+                alert("Cannot send the email because it doesn't contain '@'.");
+            } else {
+                alert("Email sent successfully!");
+            }
+        }}
+        >
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="enter e-mail"
+              className={style.inputEmail}
+            />
+            <button className={style.Email}>Send</button>
+        </form>
       </div>
 
       
