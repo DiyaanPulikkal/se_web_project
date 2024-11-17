@@ -20,7 +20,8 @@ def create_activity(db: Session, activity: ActivityCreate) -> Activity:
                            endRegistration=activity.endRegistration, 
                            participants=json.dumps([]), 
                            maxParticipants=activity.maxParticipants, 
-                           isGroup=activity.isGroup
+                           isGroup=activity.isGroup,
+                           link=activity.link
     )
     db.add(db_activity)
     db.commit()

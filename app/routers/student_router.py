@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException, Depends, Form
+from fastapi import APIRouter, HTTPException, Depends, Form, Body
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
@@ -29,6 +29,10 @@ async def get_student_by_name(student_name: str, db: Session = Depends(get_db)):
 @router.get("/student/create/form", response_class=HTMLResponse)
 async def student_form(request):
     return tenplate.TemplateResponse("create_student.html", {"request": request})
+
+@router.get("/student/login/", response_class=HTMLResponse)
+async def student_login(student_id: int = Body(...), password: str = Body(...), db: Session = Depends(get_db)):
+    return student_crud.login_student(db, student_id, password)
 
 # POST -------------------------------------------------------------------
 

@@ -8,3 +8,4 @@ class ActivityCreate(BaseModel):
     endRegistration: str
     maxParticipants: int
     isGroup: bool
+    link: str

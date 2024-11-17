@@ -22,6 +22,14 @@ def create_student(db: Session, student: StudentCreate) -> (Student | None):
     db.refresh(db_student)
     return db_student
 
+def login_student(db: Session, student_id: int, password: str) -> (Student | None):
+    db_student = db.query(Student).filter(Student.id == student_id).first()
+    if db_student == None:
+        return None
+    if db_student.password != password:
+        return None
+    return db_student
+
 def get_student_by_id(db: Session, student_id: int) -> (Student | None):
     return db.query(Student).filter(Student.id == student_id).first()
 

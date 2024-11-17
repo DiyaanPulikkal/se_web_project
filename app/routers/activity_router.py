@@ -60,16 +60,18 @@ async def create_activity_submit(name: str = Form(...),
                                  startRegistration: str = Form(...), 
                                  endRegistration: str = Form(...), 
                                  maxParticipants: int = Form(...), 
-                                 isGroup: bool = Form(...), 
-                                 image: str = Form(...), 
+                                 isGroup: str = Form(None), 
+                                 image: str = Form(...),
+                                 link: str = Form(...), 
                                  db=Depends(get_db)):
     activity = ActivityCreate(name=name,
                                 description=description,
                                 startRegistration=startRegistration,
                                 endRegistration=endRegistration,
                                 maxParticipants=maxParticipants,
-                                isGroup=isGroup,
-                                image=image
+                                isGroup=isGroup is not None,
+                                image=image,
+                                link=link
     )
     return activity_crud.create_activity(db, activity)
 

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import style from "./NavBar.module.css";
 import logo from "./assets/logo.png";
 import accountIcon from "./assets/account-icon.png";
-function NavBar() {
+function NavBar({setIsLoggedIn}, {isLoggedIn}) {
   return (
     <nav className={style.mainNav}>
       <h2>
@@ -42,9 +42,9 @@ function NavBar() {
             </Link>
           </li>
           <li>
-            <Link className={style.login_link} to="/login">
+            {!isLoggedIn ? (<Link className={style.login_link} to="/login">
               <img src={accountIcon} className={style.account_icon}></img>Login
-            </Link>
+            </Link>) : <button className={style.login_link} onClick={() => setIsLoggedIn(false)}>Logout</button>}
           </li>
         </ul>
       </div>

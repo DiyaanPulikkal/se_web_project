@@ -14,13 +14,13 @@ import Footer from "./Footer/Footer.jsx";
 import { useState } from "react";
 
 function App() {
-  const [isLogged, setIsLogged] = useState({ value: false });
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <>
       <Router>
         <header>
-          <NavBar />
+          <NavBar setIsLoggedIn={setIsLoggedIn}/>
         </header>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -28,11 +28,11 @@ function App() {
           <Route path="/program" element={<Program />} />
           <Route
             path="/admission"
-            element={<Admission isLoggedIn={isLogged} />}
+            element={<Admission/>}
           />
           <Route path="/activities" element={<Activities />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/login" element={<Login />} />
+          {isLoggedIn ? <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn}/>} /> : null}
           <Route path="/register" element={<Register />} />
           <Route path="/forget" element={<Forget />} />
         </Routes>

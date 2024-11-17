@@ -14,3 +14,4 @@ class Activity(Base):
     participants = Column(TEXT)
     maxParticipants = Column(Integer)
     isGroup = Column(Boolean)
+    link = Column(String)
