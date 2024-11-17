@@ -32,8 +32,7 @@ function App() {
           />
           <Route path="/activities" element={<Activities />} />
           <Route path="/contact" element={<Contact />} />
-          {isLoggedIn ? <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn}/>} /> : null}
-          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn}/>} />
           <Route path="/forget" element={<Forget />} />
         </Routes>
         <footer>

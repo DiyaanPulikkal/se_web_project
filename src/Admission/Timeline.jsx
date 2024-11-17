@@ -27,7 +27,7 @@ const rounds = [
 ];
 
 function Timeline() {
-    const [currentDate, setCurrentDate] = useState(new Date(2024, 7, 31));
+    const [currentDate, setCurrentDate] = useState(new Date());
     const [posIndex, setPosIndex] = useState(0);
 
     const currentRound = rounds[0];
@@ -50,7 +50,7 @@ function Timeline() {
             return currentDate < new Date(round.startDate)
         });
         setRoundsLocked(updatedRoundsLocked);
-        for (let i = carRun.length - 1; i >= 0; i--) {
+        for (let i = roundsLocked.length - 1; i >= 0; i--) {
             if (roundsLocked[i] === false) {
                 setPosIndex(i+1);
                 break;
