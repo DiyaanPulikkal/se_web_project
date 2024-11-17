@@ -15,7 +15,7 @@ const rounds = [
     {
         id: 2,
         name: "Round 2",
-        startDate: "2024-12-25T10:30:00",
+        startDate: "2023-12-25T10:30:00",
         endDate: "2024-01-10T10:30:00"
     },
     {
@@ -50,6 +50,10 @@ function Timeline() {
             return currentDate < new Date(round.startDate)
         });
         setRoundsLocked(updatedRoundsLocked);
+        
+    }, [currentDate, rounds]);
+
+    useEffect(() => {
         for (let i = roundsLocked.length - 1; i >= 0; i--) {
             if (roundsLocked[i] === false) {
                 setPosIndex(i+1);
@@ -59,7 +63,7 @@ function Timeline() {
                 setPosIndex(i);
             }
         }
-    }, [currentDate, rounds]);
+    }, [roundsLocked]);
 
     const carRun = [{ left: 10, top: 0}, { left: 25, top: -4 }, { left: 45, top: 12 }, { left: 58, top: 70 }];
    
