@@ -1,7 +1,24 @@
 import style from "./Activity.module.css";
 
-function Activity(props) {
-  console.log(props);
+function Activity(props){
+
+  const goToForm = (index) => {
+    window.location.href = `http://localhost:8000/activity/add_participant/${index}/form/`;
+  }
+
+  const addParticipant = (index) => {
+    fetch(`http://localhost:8000/activity/add_participant/${index}/${props.currentStudentId}/`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      }}
+    ).then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+    });
+  }
+
+  
   if (props.mainTitle === "Upcoming") {
     return (
       <div className={style.activityContainer}>
@@ -14,14 +31,19 @@ function Activity(props) {
           <a href={props.link} target="_blank" rel="noreferrer" style={{textDecoration: "none", color: "#6a9c89"}}>More Info</a>
         </div>
 
+        {props.isGroup ? 
         <input 
           type="button" 
           value = "Register"
-          // edit tomorooow
           disabled={!props.maxParticipants || !props.startRegistration || !props.endRegistration}  
-          onClick={() => alert("You clicked the Register button!")}
-        />
-        
+          onClick={() => goToForm(props.index)}
+        /> : 
+        <input 
+          type="button" 
+          value = "Register"
+          disabled={!props.maxParticipants || !props.startRegistration || !props.endRegistration}  
+          onClick={() => addParticipant(props.index)}
+        />}
   
       </div>);
   } else {

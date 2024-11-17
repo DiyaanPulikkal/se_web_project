@@ -39,14 +39,24 @@ async def get_archived_activities(db=Depends(get_db)):
 
 # PUT --------------------------------------------------------------------------------------------------------------
 
-@router.put("/activity/add_participant/{activity_index}/")
-async def add_participant_to_activity(activity_index: int, participants_id: List[int] = Query(default=None), group_name: Optional[str] = None, db=Depends(get_db)):
-    if participants_id == None or len(participants_id) == 0:
-        raise HTTPException(status_code=400, detail="No participants_id provided")
-    result = activity_crud.add_participant_to_activity(db, activity_index, participants_id, group_name)
+@router.put("/activity/add_participant/{activity_index}/{student_id}")
+async def add_participant_to_activity(activity_index: int, student_id: int, db=Depends(get_db)):
+    result = activity_crud.add_participant_to_activity(db, activity_index, [student_id])
     if result == None:
         raise HTTPException(status_code=404, detail="Failed to add participant to activity")
     return result
+
+@router.get("/activity/add_participant/{index}/form/", response_class=HTMLResponse)
+async def add_participant_to_activity_form(index: int, request: Request):
+    return templates.TemplateResponse("add_participant.html", {"request": request, "index": index})
+
+@router.post("/activity/add_participant/{index}/submit")
+async def add_participant_to_activity_submit(index: int, request: Request, db=Depends(get_db)):
+    form = await request.form()
+    participants_id = form.getlist("participants_id")
+    group_name = form.get("group_name")
+    print(group_name)
+    return activity_crud.add_participant_to_activity(db, index, participants_id, group_name)
 
 # POST --------------------------------------------------------------------------------------------------------------
 

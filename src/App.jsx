@@ -31,7 +31,7 @@ function App() {
             path="/admission"
             element={<Admission/>}
           />
-          <Route path="/activities" element={<Activities />} />
+          <Route path="/activities" element={<Activities currentStudentId={currentStudentId}/>} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} setCurrentStudentId={setCurrentStudentId}/>} />
           <Route path="/forget" element={<Forget />} />

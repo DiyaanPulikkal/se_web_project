@@ -10,6 +10,8 @@ function ActSection(props) {
     setIsOpen(!isOpen);
   };
 
+  
+
   return (
     <div className={style.mainDiv}>
       <h2 onClick={toggleAccordion} className={style.accordionHeader}>
@@ -28,9 +30,10 @@ function ActSection(props) {
           maxHeight: isOpen ? `${contentRef.current.scrollHeight}px` : "0px",
         }}
       >
-        {props.content.map((child, index) => (
-          <div key={index}>
+        {props.content.map((child) => (
+          <div key={child.index}>
             <Activity
+              index={child.index}
               image={child.image}
               title={child.title}
               description={child.description}
@@ -38,7 +41,9 @@ function ActSection(props) {
               {...(props.title === "Upcoming" && { maxParticipants: child.maxParticipants })}
               {...(props.title === "Upcoming" && { startRegistration: child.startRegistration })}
               {...(props.title === "Upcoming" && { endRegistration: child.endRegistration })}
+              {...(props.title === "Upcoming" && { isGroup: child.isGroup })}
               mainTitle={props.title}
+              currentStudentId={props.currentStudentId}
             />
           </div>
         ))}

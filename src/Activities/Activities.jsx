@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 import pic1 from './assets/picture1.jpg';
 
-function Activities() {
+function Activities({currentStudentId}) {
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll to the top of the page when the component loads
   }, []);
@@ -51,8 +51,8 @@ function Activities() {
       <h1 className="pageHeading">Activities</h1>
       <img src={pic1} alt="Students" className={style.imageProgram} />
       <div className={style.sectionContainer}>
-        <ActSection title="Upcoming" content={upcomingActivities} />
-        <ActSection title="Archive" content={archivedActivities} />
+        <ActSection title="Upcoming" content={upcomingActivities} currentStudentId={currentStudentId}/>
+        <ActSection title="Archive" content={archivedActivities} currentStudentId={currentStudentId}/>
       </div>
     </>
   );
