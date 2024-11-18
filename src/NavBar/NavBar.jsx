@@ -7,7 +7,7 @@ function deleteCookie(name) {
   document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
 }
 
-function NavBar({setIsLoggedIn, isLoggedIn, setCurrentStudentId}) {
+function NavBar({setIsLoggedIn, isLoggedIn, setCurrentStudentId, currentStudentId}) {
 
   const handleLogout = () => {
     setIsLoggedIn(false);
@@ -56,7 +56,7 @@ function NavBar({setIsLoggedIn, isLoggedIn, setCurrentStudentId}) {
           <li>
             {!isLoggedIn ? (<Link className={style.login_link} to="/login">
               <img src={accountIcon} className={style.account_icon}></img>Login
-            </Link>) : <button className={style.login_link} onClick={() => handleLogout()}>Logout</button>}
+            </Link>) : <div className={style.divLog}><p>ID: {currentStudentId}</p><button  onClick={() => handleLogout()}>Logout</button></div>}
           </li>
         </ul>
       </div>

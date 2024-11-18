@@ -38,7 +38,7 @@ function App() {
     <>
       <Router>
         <header>
-          <NavBar setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} setCurrentStudentId={setCurrentStudentId}/>
+          <NavBar setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} setCurrentStudentId={setCurrentStudentId} currentStudentId={currentStudentId}/>
         </header>
         <Routes>
           <Route path="/" element={<Home />} />

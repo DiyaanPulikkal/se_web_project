@@ -92,3 +92,38 @@
 .login_link:hover {
   color: #585859;
 }
+
+.divLog {
+  display: flex;
+  margin-left: 2vw;
+  width: auto;
+  height: auto;
+  display:inline-flex;
+  
+  
+}
+
+.divLog button {
+  height: 3vh;
+  width: auto;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  border-radius: 0.5rem;
+  border-color: #585859;
+  border-style:none;
+  transition: ease-in-out 0.25s;
+}
+
+.divLog button:hover {
+  background-color: #b1aea7;
+}
+
+.divLog p {
+  color: rgb(228, 227, 227);
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  padding-right: 1vh;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
