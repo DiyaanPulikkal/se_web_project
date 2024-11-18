@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, Request, Form
+from fastapi import APIRouter, Depends, Request, Form, Body
 from schemas.email import EmailCreate
 from database import get_db
 import crud.email_crud as email_crud
@@ -16,14 +16,14 @@ def add_email(email: EmailCreate, db = Depends(get_db)):
     email_db = email_crud.add_email(db, email)
     if email_db == None:
         return {"status": 400, "message": "Email already exists"}
-    return email_db
+    return {"status": 200}
 
 @router.delete("/email/remove_email")
-def remove_email(email: str, db = Depends(get_db)):
-    email_db = email_crud.remove_email(db, email)
+def remove_email(address: str = Body(...), db = Depends(get_db)):
+    email_db = email_crud.remove_email(db, address)
     if email_db == None:
         return {"status": 400, "message": "Email does not exist"}
-    return email_db
+    return {"status": 200}
 
 @router.get("/email/send_email/form")
 def send_email_form(request: Request, db = Depends(get_db)):

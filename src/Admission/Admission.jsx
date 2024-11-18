@@ -399,19 +399,11 @@ function Admission(props) {
               body: JSON.stringify({"address" : emailInput}),
             })
               .then((response) => {
-                if (!response.ok) {
-                  throw new Error(`HTTP error! Status: ${response.status}`);
-                }
                 return response.json();
               })
               .then((data) => {
-                if (data.status === 200) {
-                  setIsLoggedIn(true);
-                  setCurrentStudentId(data.student_id);
-                  document.cookie = `student_id=${data.student_id}`;
-                  navigate("/");
-                } else {
-                  alert("Invalid Credentials");
+                if (data.status !== 200) {
+                  alert("Error");
                 }
               })
               .catch((error) => {
@@ -432,18 +424,36 @@ function Admission(props) {
         <form className={style.InForm} 
             onSubmit={(e) => {
             e.preventDefault(); // Prevent form submission
-            const emailInput = document.getElementById("email").value; // Get email value
+            const emailInput = document.getElementById("email1").value; // Get email value
             if (!emailInput.includes("@")) {
                 alert("Email must contain '@'.");
             } else {
-                alert("Successfully Unsucscribed your Email.");
+                alert("Successfully Unsubscribed your Email.");
             }
+            fetch("http://localhost:8000/email/remove", {
+              method: "DELETE",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({"address" : emailInput}),
+            })
+              .then((response) => {
+                return response.json();
+              })
+              .then((data) => {
+                if (data.status !== 200) {
+                  alert("Error");
+                }
+              })
+              .catch((error) => {
+                console.error("Error:", error);
+              });
         }}
         >
             <input
               type="text"
-              name="email"
-              id="email"
+              name="email1"
+              id="email1"
               placeholder="enter e-mail"
               className={style.inputEmail}
             />

@@ -11,8 +11,8 @@ def add_email(db: Session, email: EmailCreate) -> Email:
     db.refresh(db_email)
     return db_email
 
-def remove_email(db: Session, email: str) -> Email:
-    db_email = db.query(Email).filter(Email.address == email).first()
+def remove_email(db: Session, address: str) -> Email:
+    db_email = db.query(Email).filter(Email.address == address).first()
     if db_email == None:
         return None
     db.delete(db_email)
