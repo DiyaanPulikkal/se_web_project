@@ -381,15 +381,15 @@ function Admission(props) {
 
 
       <div className={style.EmailSection}>
-        <p>Get more notification:</p> 
+        <p>Subscribe to our Mailing List:</p> 
         <form className={style.InForm} 
             onSubmit={(e) => {
             e.preventDefault(); // Prevent form submission
             const emailInput = document.getElementById("email").value; // Get email value
             if (!emailInput.includes("@")) {
-                alert("Cannot send the email because it doesn't contain '@'.");
+                alert("Email must contain '@'.");
             } else {
-                alert("Email sent successfully!");
+                alert("Email added to the mailing list!");
             }
         }}
         >
@@ -400,7 +400,28 @@ function Admission(props) {
               placeholder="enter e-mail"
               className={style.inputEmail}
             />
-            <button className={style.Email}>Send</button>
+            <button className={style.Email}>Submit</button>
+        </form>
+        <p>Unsubscribe Email:</p> 
+        <form className={style.InForm} 
+            onSubmit={(e) => {
+            e.preventDefault(); // Prevent form submission
+            const emailInput = document.getElementById("email").value; // Get email value
+            if (!emailInput.includes("@")) {
+                alert("Email must contain '@'.");
+            } else {
+                alert("Successfully Unsucscribed your Email.");
+            }
+        }}
+        >
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="enter e-mail"
+              className={style.inputEmail}
+            />
+            <button className={style.Email}>Submit</button>
         </form>
       </div>
 

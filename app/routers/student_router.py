@@ -17,7 +17,7 @@ async def get_student(student_id: int, db: Session = Depends(get_db)):
     db_student = student_crud.get_student_by_id(db, student_id)
     if db_student is None:
         raise HTTPException(status_code=404, detail="Student not found")
-    return {"student_id": db_student.id, "student_name": db_student.name}
+    return {"student_id": db_student.id, "student_name": db_student.name, "password": db_student.password}
 
 @router.get("/student/name/{student_name}")
 async def get_student_by_name(student_name: str, db: Session = Depends(get_db)):

@@ -3,7 +3,7 @@ from models.email_model import Email
 from schemas.email import EmailCreate
 
 def add_email(db: Session, email: EmailCreate) -> Email:
-    db_email = Email(address=email.email)
+    db_email = Email(address=email.address)
     if db.query(Email).filter(Email.address == db_email.address).first() != None:
         return None
     db.add(db_email)

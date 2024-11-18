@@ -2,7 +2,7 @@ from pydantic import BaseModel, field_validator
 import re
 
 class EmailCreate(BaseModel):
-    email: str
+    address: str
     
     @field_validator('email')
     def email_validator(cls, value):
