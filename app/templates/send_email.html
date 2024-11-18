@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Send Email</title>
+</head>
+<body>
+    <h1>Send Email</h1>
+    <form action="/email/send_email/submit" method="post">
+        <label for="sender">Sender email address (gmail only):</label>
+        <input type="email" name="sender" id="sender" required>
+        <br>
+        <label for="sender_password">Sender email password:</label>
+        <input type="password" name="sender_password" id="sender_password" required>
+        <br>
+        <label for="subject">Subject:</label>
+        <input type="text" name="subject" id="subject" required>
+        <br>
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" required></textarea>
+        <br>
+        <button type="submit">Send</button>
+    </form>
+</html>

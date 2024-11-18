@@ -1,4 +1,3 @@
-from fastapi import Response
 from sqlalchemy.orm import Session
 from models.student_model import Student
 from schemas.student import StudentCreate
