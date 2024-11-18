@@ -58,7 +58,7 @@ function Login({setIsLoggedIn, setCurrentStudentId}) {
             type="text"
             name="student_id"
             id="student_id"
-            placeholder="enter e-mail"
+            placeholder="enter student id"
             className={style.customInput}
           />
 
