@@ -34,6 +34,7 @@ function Login({setIsLoggedIn, setCurrentStudentId}) {
         if (data.status === 200) {
           setIsLoggedIn(true);
           setCurrentStudentId(data.student_id);
+          document.cookie = `student_id=${data.student_id}`;
           navigate("/");
         } else {
           alert("Invalid Credentials");

@@ -11,11 +11,28 @@ import Login from "./Login/Login.jsx";
 import Register from "./Register/Register.jsx";
 import Forget from "./ForgetPassword/ForgetPassword.jsx";
 import Footer from "./Footer/Footer.jsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2){ 
+    return parts.pop().split(';').shift();
+  }
+  return null;
+}
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [currentStudentId, setCurrentStudentId] = useState(null);
+
+  useEffect(() => {
+    const id_cookie = getCookie("student_id");
+    if (id_cookie) {
+      setCurrentStudentId(id_cookie);
+      setIsLoggedIn(true);
+    }
+  }, []);
 
   return (
     <>

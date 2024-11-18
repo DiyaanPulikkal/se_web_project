@@ -2,12 +2,19 @@ import { Link } from "react-router-dom";
 import style from "./NavBar.module.css";
 import logo from "./assets/logo.png";
 import accountIcon from "./assets/account-icon.png";
+
+function deleteCookie(name) {
+  document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
+}
+
 function NavBar({setIsLoggedIn, isLoggedIn, setCurrentStudentId}) {
 
   const handleLogout = () => {
     setIsLoggedIn(false);
     setCurrentStudentId(null);
+    deleteCookie("student_id");    
   }
+  
   return (
     <nav className={style.mainNav}>
       <h2>

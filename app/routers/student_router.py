@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException, Depends, Form, Body, Request
+from fastapi import APIRouter, HTTPException, Depends, Form, Body, Request, Response
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
@@ -50,7 +50,7 @@ async def create_student(student: StudentCreate, db: Session = Depends(get_db)):
     return {"student_id": db_student.id, "student_name": db_student.name}
 
 @router.post("/student/login/")
-async def student_login(student_id: int = Body(...), password: str = Body(...), db: Session = Depends(get_db)):
+async def student_login(response: Response, student_id: int = Body(...), password: str = Body(...), db: Session = Depends(get_db)):
     student = student_crud.login_student(db, student_id, password)
     if student is None:
         return {"status": 404}
