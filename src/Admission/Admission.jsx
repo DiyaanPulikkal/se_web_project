@@ -402,9 +402,6 @@ function Admission(props) {
                 return response.json();
               })
               .then((data) => {
-                if (data.status !== 200) {
-                  alert("Error");
-                }
               })
               .catch((error) => {
                 console.error("Error:", error);
@@ -441,9 +438,6 @@ function Admission(props) {
                 return response.json();
               })
               .then((data) => {
-                if (data.status !== 200) {
-                  alert("Error");
-                }
               })
               .catch((error) => {
                 console.error("Error:", error);
