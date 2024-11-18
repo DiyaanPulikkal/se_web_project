@@ -38,6 +38,7 @@ function ActSection(props) {
               title={child.title}
               description={child.description}
               link={child.link}
+              {...(props.title === "Upcoming" && { participants: child.participants })}
               {...(props.title === "Upcoming" && { maxParticipants: child.maxParticipants })}
               {...(props.title === "Upcoming" && { startRegistration: child.startRegistration })}
               {...(props.title === "Upcoming" && { endRegistration: child.endRegistration })}

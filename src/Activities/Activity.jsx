@@ -30,12 +30,13 @@ function Activity(props){
           <p>{props.description}</p>
           <a href={props.link} target="_blank" rel="noreferrer" style={{textDecoration: "none", color: "#6a9c89"}}>More Info</a>
         </div>
+        {!props.maxParticipants || !props.startRegistration || !props.endRegistration}
 
         {props.isGroup ? 
         <input 
           type="button" 
           value = "Register"
-          disabled={!props.maxParticipants || !props.startRegistration || !props.endRegistration}  
+          disabled={new Date() < new Date(props.startRegistration) || props.maxParticipants <= props.participants.length || props.currentStudentId === null}
           onClick={() => goToForm(props.index)}
         /> : 
         <input 
