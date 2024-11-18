@@ -7,10 +7,11 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-router = APIRouter()
 
+router = APIRouter()
 template = Jinja2Templates(directory="templates")
 
+# FOR CLIENT ==========================================================================================================
 @router.post("/email/add_email")
 def add_email(email: EmailCreate, db = Depends(get_db)):
     email_db = email_crud.add_email(db, email)
@@ -24,6 +25,9 @@ def remove_email(address: str = Body(...), db = Depends(get_db)):
     if email_db == None:
         return {"status": 400, "message": "Email does not exist"}
     return {"status": 200}
+
+
+# FOR ADMIN ==========================================================================================================
 
 @router.get("/email/send_email/form")
 def send_email_form(request: Request, db = Depends(get_db)):

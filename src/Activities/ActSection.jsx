@@ -8,9 +8,7 @@ function ActSection(props) {
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
-  };
-
-  
+  };  
 
   return (
     <div className={style.mainDiv}>
@@ -35,7 +33,7 @@ function ActSection(props) {
             <Activity
               index={child.index}
               image={child.image}
-              title={child.title}
+              title={child.name}
               description={child.description}
               link={child.link}
               {...(props.title === "Upcoming" && { participants: child.participants })}
