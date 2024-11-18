@@ -3,13 +3,12 @@ import info from "./assets/info.png";
 import Timeline from "./Timeline.jsx";
 import { useEffect } from 'react';
 import { useState ,useRef} from "react";
-import Email from "./Email.jsx";
 
 
 function Admission(props) {
 
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top of the page when the component loads
+    window.scrollTo(0, 0);
   }, []);
 
   const [isOpen1, setIsOpen1] = useState(false);
@@ -384,8 +383,8 @@ function Admission(props) {
         <p>Subscribe to our Mailing List:</p> 
         <form className={style.InForm} 
             onSubmit={(e) => {
-            e.preventDefault(); // Prevent form submission
-            const emailInput = document.getElementById("email").value; // Get email value
+            e.preventDefault(); 
+            const emailInput = document.getElementById("email").value;
             if (!emailInput.includes("@")) {
                 alert("Email must contain '@'.");
             } else {
@@ -423,8 +422,8 @@ function Admission(props) {
         <p>Unsubscribe Email:</p> 
         <form className={style.InForm} 
             onSubmit={(e) => {
-            e.preventDefault(); // Prevent form submission
-            const emailInput = document.getElementById("email1").value; // Get email value
+            e.preventDefault(); 
+            const emailInput = document.getElementById("email1").value; 
             if (!emailInput.includes("@")) {
                 alert("Email must contain '@'.");
             } else {

@@ -3,7 +3,6 @@ import AdmissionSlide from "./AdmissionSlider/AdmissionInSlide.jsx";
 import HeaderSE from "./HeaderSeSlider/HeaderInSlide.jsx";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { useState } from "react";
 import style from "./Home.module.css";
 import { Link } from "react-router-dom";
 import Glasgowuniver from './asset/gasglowUni.jpg';
@@ -12,9 +11,7 @@ import Queenlanduniver from './asset/queenlandUni.jpg';
 
 // import slide 3 component
 import SlideEvent from './SlideEvent/SlideEvent.jsx'
-// import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+
 
 
 // import tuitionfee image
@@ -186,10 +183,8 @@ function Home() {
 
 
 
-      {/* Show 3 slide for events */}
-      {/* <div className={style.slider}> */}
+    
         <SlideEvent />
-      {/* </div> */}
 
 
 

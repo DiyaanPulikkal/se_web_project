@@ -12,7 +12,9 @@ function NavBar({setIsLoggedIn, isLoggedIn, setCurrentStudentId, currentStudentI
   const handleLogout = () => {
     setIsLoggedIn(false);
     setCurrentStudentId(null);
-    deleteCookie("student_id");    
+    deleteCookie("student_id");
+    window.location.href = "/";
+
   }
   
   return (

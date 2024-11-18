@@ -11,7 +11,7 @@ const position = [13.7265341, 100.7748818];
 
 function Contact() {
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top of the page when the component loads
+    window.scrollTo(0, 0); 
   }, []);
   const [copiedIndex, setCopiedIndex] = useState(null);
 
@@ -19,8 +19,8 @@ function Contact() {
     navigator.clipboard
       .writeText(text)
       .then(() => {
-        setCopiedIndex(index); // Show popup for the clicked phone number
-        setTimeout(() => setCopiedIndex(null), 2000); // Hide popup after 2 seconds
+        setCopiedIndex(index); 
+        setTimeout(() => setCopiedIndex(null), 2000);
       })
       .catch(() => {
         alert("Failed to copy to clipboard.");

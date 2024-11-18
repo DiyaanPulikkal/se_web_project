@@ -8,7 +8,6 @@ import About from "./About/About.jsx";
 import Activities from "./Activities/Activities.jsx";
 import Contact from "./Contact/Contact.jsx";
 import Login from "./Login/Login.jsx";
-import Register from "./Register/Register.jsx";
 import Forget from "./ForgetPassword/ForgetPassword.jsx";
 import Footer from "./Footer/Footer.jsx";
 import { useEffect, useState } from "react";

@@ -22,16 +22,16 @@
 }
 
 .innerdiv {
-  flex: 1; /* Optional: this makes each div take equal space */
-  margin-right: 10px; /* Optional: adds space between divs */
+  flex: 1; 
+  margin-right: 10px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 
-  /* background-color: #f8f7f2; */
+  
 }
 
 .innerdiv:last-child {
-  margin-right: 0; /* Removes right margin for the last div */
+  margin-right: 0;
 }
 
 .forFace {

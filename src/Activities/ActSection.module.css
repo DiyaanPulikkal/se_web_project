@@ -13,7 +13,7 @@
 }
 
 .accordionContentOpen {
-  max-height: 1000px; /* Large enough to allow full expansion */
+  max-height: 1000px;
 }
 
 .accordionHeader {
@@ -31,9 +31,9 @@
 .accordionIcon {
   margin-left: auto;
   display: inline-block;
-  transition: transform 0.3s ease; /* Smooth transition */
+  transition: transform 0.3s ease;
 }
 
 .open {
-  transform: rotate(90deg); /* Rotate the arrow to point down */
+  transform: rotate(90deg);
 }

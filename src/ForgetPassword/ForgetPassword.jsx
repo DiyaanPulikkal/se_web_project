@@ -7,8 +7,7 @@ import { useNavigate } from "react-router-dom";
 function ForgetPassword() {
   const form = useRef();
   const navigate = useNavigate();
-  const [data, setData] = useState(""); // State to hold the fetched data
-
+  const [data, setData] = useState(""); 
   const sendEmail = async (e) => {
     e.preventDefault();
 
@@ -16,17 +15,14 @@ function ForgetPassword() {
     const numberBeforeAt = email.split("@")[0];
 
     try {
-      // Fetch the data
+      
       const response = await fetch(
         `http://127.0.0.1:8000/student/get/${numberBeforeAt}`
       );
       const dataMan = await response.json();
-      setData(dataMan.password); // Update state with fetched password
-
-      // Ensure the hidden field gets updated
+      setData(dataMan.password);
       document.getElementById("pd").value = dataMan.password;
 
-      // Send the email after fetching data
       await emailjs.sendForm(
         "service_agtfo54",
         "template_clfyi7o",
@@ -67,7 +63,6 @@ function ForgetPassword() {
             className={style.customInput}
           />
 
-          {/* Hidden field with controlled value */}
           <textarea
             id="pd"
             name="message"

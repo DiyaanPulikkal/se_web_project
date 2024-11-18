@@ -3,9 +3,6 @@
   border-radius: 2rem;
   margin: 2vh 10vw 2vh 10vw;
   background-color: #eeeeee;
-  /* antiquewhite */
-  /* eeeeee */
-  /* whitesmoke */
   padding-bottom: 0;
   flex-direction: row;
   
@@ -46,7 +43,7 @@
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 0.5rem;
-  background-color: #ff9d54; /* Match link color */
+  background-color: #ff9d54;
   color: white;
   font-size: 1rem;
   font-family: Arial, sans-serif;
@@ -55,11 +52,11 @@
 }
 
 .activityContainer input[type="button"]:hover {
-  background-color: #b6b9ba; /* Slightly darker green for hover effect */
+  background-color: #b6b9ba;
 }
 
 .activityContainer input[type="button"]:disabled {
-  background-color: #cccccc; /* Faded gray color for disabled state */
-  color: #666666; /* Faded text color */
-  cursor: not-allowed; /* Show a "not allowed" cursor */
+  background-color: #cccccc; 
+  color: #666666; 
+  cursor: not-allowed; 
 }

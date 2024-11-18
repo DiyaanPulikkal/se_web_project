@@ -1,8 +1,6 @@
 import style from "./Timeline.module.css";
 import timelineImage from "./assets/admission_timeline.png";
-import pin from "./assets/pin.png";
-import { useState, useEffect ,useRef} from "react";
-import lockedIcon from "./assets/locked.png";
+import { useState, useEffect } from "react";
 import unlockedIcon from "./assets/unlocked.png";
 
 const rounds = [
@@ -29,9 +27,6 @@ const rounds = [
 function Timeline() {
     const [currentDate, setCurrentDate] = useState(new Date());
     const [posIndex, setPosIndex] = useState(0);
-
-    const currentRound = rounds[0];
-    const pinPosition = { left: 0, top: 0 };
 
 
     useEffect(() => {
@@ -73,16 +68,6 @@ function Timeline() {
         <div className={style.timelineDiv}>
             <img src={timelineImage} className={style.timelineImage} alt="Admission Timeline" />
             <img src={unlockedIcon} className={style.pin} alt="Pin" style={{ position: "absolute", left: `${carRun[posIndex].left}%`, top: `${carRun[posIndex].top}%`, zIndex: 2 }} />
-
-
-
-
-
-
-
-            
-
-
         </div>
     );
 }

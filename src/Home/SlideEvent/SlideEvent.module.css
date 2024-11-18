@@ -82,17 +82,6 @@
     height: 20px;
     /* background-color: rgba(81, 106, 106, 0.57); */
 }
-/* On smaller screens, reduce padding and text size */
-/* @media (max-width: 768px) {
-    .slide {
-        padding: 10px;
-    }
-
-    .slide-date,
-    .slide-location {
-        font-size: 0.1em;
-    }
-} */
 
 /* end */
 
