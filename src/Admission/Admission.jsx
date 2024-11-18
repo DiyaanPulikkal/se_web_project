@@ -391,6 +391,32 @@ function Admission(props) {
             } else {
                 alert("Email added to the mailing list!");
             }
+            fetch("http://localhost:8000/email/add_email", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({"address" : emailInput}),
+            })
+              .then((response) => {
+                if (!response.ok) {
+                  throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+              })
+              .then((data) => {
+                if (data.status === 200) {
+                  setIsLoggedIn(true);
+                  setCurrentStudentId(data.student_id);
+                  document.cookie = `student_id=${data.student_id}`;
+                  navigate("/");
+                } else {
+                  alert("Invalid Credentials");
+                }
+              })
+              .catch((error) => {
+                console.error("Error:", error);
+              });
         }}
         >
             <input
