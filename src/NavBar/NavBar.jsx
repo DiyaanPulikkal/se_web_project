@@ -2,12 +2,20 @@ import { Link } from "react-router-dom";
 import style from "./NavBar.module.css";
 import logo from "./assets/logo.png";
 import accountIcon from "./assets/account-icon.png";
+import Hamburger from "./Hamburger.jsx";
+import { useState } from "react";
 
 function deleteCookie(name) {
   document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
 }
 
 function NavBar({setIsLoggedIn, isLoggedIn, setCurrentStudentId, currentStudentId}) {
+
+  const [hamburgerOpen, setHamburgerOpen] = useState(false);
+
+  const toggleHamburger = () => {
+    setHamburgerOpen(!hamburgerOpen);
+  }
 
   const handleLogout = () => {
     setIsLoggedIn(false);
@@ -28,6 +36,9 @@ function NavBar({setIsLoggedIn, isLoggedIn, setCurrentStudentId, currentStudentI
       <Link to="/">
         <img className={style.logo} src={logo} alt="logo" />
       </Link>
+      <div className={style.ham} onClick={toggleHamburger}>
+          <Hamburger setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} setCurrentStudentId={setCurrentStudentId} currentStudentId={currentStudentId}/>
+      </div>
       <div className={style.listDiv}>
         <ul>
           <li>
@@ -61,6 +72,7 @@ function NavBar({setIsLoggedIn, isLoggedIn, setCurrentStudentId, currentStudentI
             </Link>) : <div className={style.divLog}><p>ID: {currentStudentId}</p><button  onClick={() => handleLogout()}>Logout</button></div>}
           </li>
         </ul>
+        
       </div>
     </nav>
   );

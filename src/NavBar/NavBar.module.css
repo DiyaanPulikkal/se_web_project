@@ -7,7 +7,7 @@
   display: flex;
   box-sizing: border-box;
   border-bottom: 3px rgb(76, 73, 73);
-  z-index: 2;
+  z-index: 1;
 }
 
 .mainNav h2 {
@@ -59,6 +59,7 @@
 .textLink {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+  font-size: 1.5rem;
   padding: 0.7vh 2.5vw;
   text-decoration: none;
   color: white;
@@ -126,4 +127,22 @@
   padding-right: 1vh;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+}
+
+.ham {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .ham{
+    display: inline;
+    padding-top: 10px;
+    padding-left: 10px;
+    z-index: 10;
+  }
+
+  .mainNav ul {
+    display: inline;
+    z-index: 1;
+  }
 }
