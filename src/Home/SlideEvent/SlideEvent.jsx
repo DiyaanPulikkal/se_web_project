@@ -6,7 +6,7 @@ import nextArrowImage from './assets/rightArrow.png'; // Path to your next butto
 import style from "./SlideEvent.module.css";
 import mapping from './assets/map.png';
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 
 
