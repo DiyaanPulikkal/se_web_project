@@ -111,11 +111,11 @@ function SlideEvent() {
             <Slider {...settings}>
                 {upcomingActivities.map((event, index) => (
                     <div key={index} className={style.slide}>
-                        <img src={event.imageUrl} alt={event.date} className={style.slideImage} />
-                        <p className={style.slideDate}>{event.date}</p>
+                        <img src={`http://localhost:8000/static/${event.imageUrl}`} alt={event.startRegistration} className={style.slideImage} />
+                        <p className={style.slideDate}>{event.startRegistration}</p>
                         <div className={style.divCoverIconNLocation}>   
-                            <img src={event.icon} alt={event.location} className={style.slideIcon} />
-                            <p className={style.slideLocation}>{event.location}</p>
+                            <img src={mapping} alt={"KMITL"} className={style.slideIcon} />
+                            <p className={style.slideLocation}>{"KMITL"}</p>
                         </div>
                     </div>
                 ))}
