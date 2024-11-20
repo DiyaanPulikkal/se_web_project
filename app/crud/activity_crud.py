@@ -5,8 +5,6 @@ from typing import List
 import json
 import datetime
 
-# CREATE ---------------------------------------------------------------------
-
 def create_activity(db: Session, activity: ActivityCreate) -> Activity:
     activity_list = db.query(Activity).all()
     index = 1
@@ -29,8 +27,6 @@ def create_activity(db: Session, activity: ActivityCreate) -> Activity:
     return db_activity
 
 
-# READ -----------------------------------------------------------------------
-
 def get_all_activities(db: Session):
     return db.query(Activity).all()
 
@@ -46,7 +42,6 @@ def get_upcoming_activities(db: Session):
 def get_archived_activities(db: Session):
     return db.query(Activity).filter(Activity.endRegistration <= datetime.datetime.now().date()).all()
 
-# UPDATE ---------------------------------------------------------------------
 def add_participant_to_activity(db: Session, activity_index: int, participants_id: List[int], group_name: str = None) -> (Activity | None):
     db_activity = db.query(Activity).filter(Activity.index == activity_index).first()
 
@@ -74,8 +69,6 @@ def add_participant_to_activity(db: Session, activity_index: int, participants_i
     db.commit()
     db.refresh(db_activity)
     return db_activity
-
-# DELETE ---------------------------------------------------------------------
 
 def delete_activity_by_index(db: Session, activity_index: int) -> (Activity | None):
     db_activity = db.query(Activity).filter(Activity.index == activity_index).first()

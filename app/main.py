@@ -20,9 +20,3 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 app.include_router(activity_router)
 app.include_router(student_router)
 app.include_router(email_router)
-
-
-
-@app.get("/")
-def read_root():
-    return {"message": "Welcome to this fantastic app!"}

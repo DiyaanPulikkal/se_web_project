@@ -12,6 +12,7 @@ router = APIRouter()
 template = Jinja2Templates(directory="templates")
 
 # FOR CLIENT ==========================================================================================================
+
 @router.post("/email/add_email")
 def add_email(email: EmailCreate, db = Depends(get_db)):
     email_db = email_crud.add_email(db, email)
