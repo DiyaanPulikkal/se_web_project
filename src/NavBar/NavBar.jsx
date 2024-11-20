@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import style from "./NavBar.module.css";
 import logo from "./assets/logo.png";
 import accountIcon from "./assets/account-icon.png";
-import Hamburger from "./Hamburger.jsx";
 import { useState } from "react";
 
 function deleteCookie(name) {
@@ -36,9 +35,6 @@ function NavBar({setIsLoggedIn, isLoggedIn, setCurrentStudentId, currentStudentI
       <Link to="/">
         <img className={style.logo} src={logo} alt="logo" />
       </Link>
-      <div className={style.ham} onClick={toggleHamburger}>
-          <Hamburger setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} setCurrentStudentId={setCurrentStudentId} currentStudentId={currentStudentId}/>
-      </div>
       <div className={style.listDiv}>
         <ul>
           <li>
