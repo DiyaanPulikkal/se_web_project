@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick-theme.css";
 import prevArrowImage from './assets/leftArrow.png'; // Path to your previous button image
 import nextArrowImage from './assets/rightArrow.png'; // Path to your next button image
 import style from "./SlideEvent.module.css";
-import hackathon from './assets/AIhackathon.jpg';
 import mapping from './assets/map.png';
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
@@ -83,27 +82,6 @@ function SlideEvent() {
             console.error("There was a problem with the fetch operation:", error);
           });
       }, []);
-
-    const events = [
-        {
-            date: "24 August 2024",
-            location: "KMITL",
-            imageUrl: hackathon, 
-            icon: mapping,
-        },
-        {
-            date: "25 August 2024",
-            location: "KMITL",
-            imageUrl: "https://via.placeholder.com/150", // placeholder image
-            icon: mapping,
-        },
-        {
-            date: "26 August 2024",
-            location: "KMITL",
-            imageUrl: "https://via.placeholder.com/150",
-            icon: mapping,
-        },
-    ];
     //end
     return (
         <div className = {style.containAll}>

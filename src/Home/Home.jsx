@@ -8,15 +8,10 @@ import { Link } from "react-router-dom";
 import Glasgowuniver from './asset/gasglowUni.jpg';
 import KingMongkut from './asset/kmitlUni.jpg';
 import Queenlanduniver from './asset/queenlandUni.jpg';
-
 // import slide 3 component
 import SlideEvent from './SlideEvent/SlideEvent.jsx'
-
-
-
 // import tuitionfee image
 import tuitionFee from './asset/tuitionFee.png';
-
 // import image for insert text skill mapping
 import webIm from './asset/frontEnd.png';
 import mobileIm from './asset/mobileDeveloper.png';
@@ -24,8 +19,6 @@ import cyber from './asset/cyberSecurity.png';
 import ai from './asset/artificialEng.png';
 import CirMap from './asset/graph.png';
 //end
-
-
 import prevArrowImage from './asset/slideToleft.png'; // Path to your previous button image
 import nextArrowImage from './asset/slideToright.png'; // Path to your next button image
 
@@ -85,9 +78,6 @@ function Home() {
 
       </Carousel>
 
-
-
-
       <div className={style.divContainHeadandSub}>
         <h1 className={style.headText}>" SOFTWARE can change the World "</h1>
         <p className={style.subText}>Empowering the future through innovative software engineering, <br /> we are dedicated to building solutions that <br /> enhance our department's impact on the world.</p>
@@ -120,17 +110,9 @@ function Home() {
           </div>
         </div>
 
-
         <a target="_blank" href={'https://skill-mapping.kmitl.ac.th/curriculum/01039'}><button className={style.skillMapping}><img src={CirMap} alt="circle graph" />View More Skill Mapping</button></a>
 
-
-
       </div>
-
-
-
-
-
 
       <div className={style.programdiv}>
         <h1 className={style.headerOfProgram}>Explore Programs</h1>
@@ -162,8 +144,6 @@ function Home() {
 
       </div>
 
-
-
       <div className={style.divContainTuitionFee}>
         <div className={style.divContainImageOfTuitionFee}>
           <img src={tuitionFee} alt="tuition fee" className={style.imageFrTuiitionFee}/>
@@ -176,21 +156,8 @@ function Home() {
           </div>
         </div>
 
-      </div>
-
-
-
-
-
-
-    
+      </div>    
         <SlideEvent />
-
-
-
-
-
-
     </>
   );
 }
