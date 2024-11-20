@@ -7,6 +7,7 @@ import style from "./SlideEvent.module.css";
 import hackathon from './assets/AIhackathon.jpg';
 import mapping from './assets/map.png';
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 
 
@@ -65,7 +66,23 @@ function SlideEvent() {
             },
         ],
     };
-
+    const [upcomingActivities, setUpcomingActivities] = useState([]);
+    useEffect(() => {
+        // Fetch data from the FastAPI server
+        fetch("http://localhost:8000/activity/upcoming")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            setUpcomingActivities(data);
+          })
+          .catch((error) => {
+            console.error("There was a problem with the fetch operation:", error);
+          });
+      }, []);
 
     const events = [
         {
@@ -92,7 +109,7 @@ function SlideEvent() {
         <div className = {style.containAll}>
             <h1 className={style.headUpcomingEvent}>Upcoming Event</h1>
             <Slider {...settings}>
-                {events.map((event, index) => (
+                {upcomingActivities.map((event, index) => (
                     <div key={index} className={style.slide}>
                         <img src={event.imageUrl} alt={event.date} className={style.slideImage} />
                         <p className={style.slideDate}>{event.date}</p>
