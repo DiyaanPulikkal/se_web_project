@@ -51,7 +51,7 @@ def add_participant_to_activity(db: Session, activity_index: int, participants_i
     # check if any participant_id is already in the activity
     for participant_id in participants_id:
         for participant in json.loads(db_activity.participants):
-            if (db_activity.isGroup and participant_id in participant["participants"]) or (not db_activity.isGroup and participant_id == participant):
+            if (db_activity.isGroup and str(participant_id) in participant["participants"]) or (not db_activity.isGroup and str(participant_id) == participant):
                 return None
 
     toAdd = json.loads(db_activity.participants)

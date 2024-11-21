@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException, Depends, Request, Form
+from fastapi import APIRouter, HTTPException, Depends, Request, Form, File, UploadFile
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
 from schemas.activity import ActivityCreate
@@ -48,6 +48,8 @@ async def add_participant_to_activity_submit(index: int, request: Request, db=De
     form = await request.form()
     participants_id = form.getlist("participants_id")
     group_name = form.get("group_name")
+    participants_id = [item for item in participants_id if item]
+
     activity_crud.add_participant_to_activity(db, index, participants_id, group_name)
     return RedirectResponse(url="http://localhost:5173/activities", status_code=303)
 

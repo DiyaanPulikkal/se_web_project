@@ -8,7 +8,7 @@ function AdmissionInSlide() {
             <img src={admissionim} alt="Slide 3" />
             <div className={style.textOverAdmissionSlidePic}>
                 <h1>Admission Year 2025</h1>
-                <p> First Round: Open Soon <br /> Second Round: Open Soon </p>
+                <p> Early Round: Open "01-10-2023" <br /> First Round: Open "25-12-2023" <br /> Second Round: Open "08-03-2024"</p>
                 <div className={style.DivOverLink}>
                     <Link to="/admission">
                         Read More

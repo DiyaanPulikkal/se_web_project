@@ -28,12 +28,11 @@
 }
 .slide:hover {
     transform: scale(1.05);
-    background-color: #fc9f53;
+    background-color: whitesmoke;
     z-index: 10;
 }
 .slide:hover p{
     transform: scale(1.05);
-    color: white;
     z-index: 10;
 }
 .slideImage {
